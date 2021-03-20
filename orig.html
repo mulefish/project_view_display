@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="icon" href="data:,">
+    <meta charset="utf-8">
+    <style>
+        #board {}
+    </style>
+
+
+    <script>
+        let showLetter = true 
+        let ids = [] 
+            function addPieceIntoDom(piece) {
+                ids.push(piece.id)
+                let p = d3.select('#board')
+                    .append('svg:g')
+                    .data([{
+                        'id': piece.id,
+                    }])
+                    .attr('transform', 'translate(' + piece.x + ',' + piece.y + ')')
+                    .attr('id', piece.id)
+                    .call(d3.drag()
+                        .on("start", dragstarted)
+                        .on("drag", dragged)
+                        .on("end", dragended));
+
+                let background = p.append('svg:circle')
+                    .attr('fill-opacity', 0.1)
+                    .attr('stroke', '#000')
+                    .attr('stroke-width', 2)
+                    .attr('r', piece.r)
+                if (showLetter == true) {
+                    let foreground = p.append('svg:text')
+                        .text(piece.id)
+                        .attr('y', '.1em')
+                        .style("font-size", piece.size + "px")
+                        // .attr('transform', 'translate(' + [0, piece.r / 4] + ')')
+                        .attr('transform', 'translate(' + [10, 10] + ')')
+                        .attr('text-anchor', 'middle')
+                        .attr('font-weight', 700)
+                        .attr('font-family', 'Helvetica')
+                        .attr('fill', '#000000')
+                        .attr('stroke', 'none')
+                        .attr('pointer-events', 'none')
+                }
+            }
+
+            function dragstarted(d) {
+                let piece = pieces[d.id]
+                piece.sx = piece.x // d3.event.x // needed for snap back ability
+                piece.sy = piece.y // d3.event.y // needed for snap back ability
+            }
+
+            function dragged(d) {
+                d3.select(this).attr("transform", "translate(" + (d.x = d3.event.x) + ',' + (d.y = d3.event.y) + ')');
+            }
+
+            function dragended(d) {
+                const x = d3.event.x
+                const y = d3.event.y
+                d3.select(this).classed("active", false);
+                let piece = pieces[d.id]
+                d3.select(this).attr("transform", "translate(" + (d.x = piece.sx) + ',' + (d.y = piece.sy) + ')');
+            }
+    </script>
+
+</head>
+
+<body>
+    <script src="//d3js.org/d3.v4.min.js"></script>
+                <div id='viewport'></div>
+    <script>
+            const width = window.innerWidth;
+            const height = window.innerHeight * 0.66;
+            const size = width / 8 // Maybe ought to be called 'radius' 
+            document.getElementById("viewport").innerHTML = `<svg id='board' width="${width}" height="${height}"></svg>`
+            const svg = d3.select("svg");
+
+            class Dot {
+                constructor(id, x, y) {
+                    this.x = x;
+                    this.y = y;
+                    this.id = id;
+                    this.r = 20
+                }
+            }
+
+            const pieces = {}
+
+
+            let points = [] 
+points.push( {"x":120, "y":120 }) 
+
+            for (let key in points) {
+                let p = new Dot(key, points[key].x, points[key].y )
+                pieces[key] = p
+                addPieceIntoDom(p)
+            }
+
+            
+    </script>
+</body>
+
+</html>
