@@ -76,7 +76,7 @@ function dragended(d) {
     //d3.select(this).attr("transform", "translate(" + (d.x = piece.sx) + ',' + (d.y = piece.sx) + ')');
 
 }
-function Viewport({ height, width }) {
+function ForceDirectedGraph({ height, width }) {
 
     useEffect(() => {
         let points = []
@@ -101,4 +101,4 @@ function Viewport({ height, width }) {
 
     );
 };
-export default Viewport
+export default ForceDirectedGraph

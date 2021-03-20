@@ -1,4 +1,4 @@
-import Viewport from "./pages/Viewport/Viewport.js";
+import Viewport from "./pages/ForceDirectedGraph/ForceDirectedGraph.js";
 
 
 
