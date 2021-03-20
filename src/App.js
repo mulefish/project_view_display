@@ -1,27 +1,16 @@
-// import logo from './logo.svg';
-// import './App.css';
-import Viewport from "./Viewport";
+import Viewport from "./pages/Viewport/Viewport.js";
+
+
+
 function App() {
+  const height = window.innerHeight * 0.6
+  const width = window.innerWidth
   return (
-    <div className="App">
-      <Viewport />
+    <div>
+      <Viewport height={height} width={width} />
+      <hr />
+    hello world
     </div>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
   );
 }
 
