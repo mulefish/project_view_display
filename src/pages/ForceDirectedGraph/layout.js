@@ -1,0 +1,104 @@
+import React, { useEffect, useState } from "react";
+import * as d3 from "d3";
+import Controls from './Controls.js'
+import { Dot } from './logic.js'
+
+let pieces = []
+
+let showLetter = true
+let ids = []
+function addPieceIntoDom(piece) {
+
+    ids.push(piece.id)
+    let p = d3.select('#graph')
+        .append('svg:g')
+        .data([{
+            'id': piece.id,
+        }])
+        .attr('transform', 'translate(' + piece.x + ',' + piece.y + ')')
+        .attr('id', piece.id)
+        .call(d3.drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended));
+
+    // const background
+    p.append('svg:circle')
+        .attr('fill-opacity', 0.1)
+        .attr('stroke', '#000')
+        .attr('stroke-width', 2)
+        .attr('r', piece.r)
+    if (showLetter === true) {
+        //let foreground = 
+        p.append('svg:text')
+            .text(piece.id)
+            .attr('y', '.1em')
+            .style("font-size", piece.size + "px")
+            .attr('transform', 'translate(' + [10, 10] + ')')
+            .attr('text-anchor', 'middle')
+            .attr('font-weight', 700)
+            .attr('font-family', 'Helvetica')
+            .attr('fill', '#000000')
+            .attr('stroke', 'none')
+            .attr('pointer-events', 'none')
+    }
+}
+
+function dragstarted(d) {
+    let piece = pieces[d.id]
+    piece.sx = piece.x // d3.event.x // needed for snap back ability
+    piece.sy = piece.y // d3.event.y // needed for snap back ability
+}
+
+function dragged(d) {
+
+    const x = d3.event.x
+    const y = d3.event.y
+    d3.select(this).attr("transform", "translate(" + (d.x = x) + ',' + (d.y = y) + ')');
+}
+
+
+function dragended(d) {
+    d3.select(this).classed("active", false);
+    // console.log('%c For example...', 'background: #e0e0e0; color: #ff6633');
+    let piece = pieces[d.id]
+    piece.x = d3.event.x
+    piece.y = d3.event.y
+    d3.select(this).attr("transform", "translate(" + (d.x = piece.x) + ',' + (d.y = piece.y) + ')');
+    //d3.select(this).attr("transform", "translate(" + (d.x = piece.sx) + ',' + (d.y = piece.sx) + ')');
+}
+function ForceDirectedGraph({ }) {
+    // const [width, setWidth] = useState(window.innerWidth)
+    // const [height, setHeight] = useState(window.innerHeight * 0.7)
+    const width = window.innerWidth
+    const height = window.innerHeight * 0.7
+    // function handleChange() {
+    //     console.log(" sdfk ")
+    // }
+
+    useEffect(() => {
+
+        let points = []
+        points.push({ "id": "mydear", "x": 120, "y": 120 })
+        points.push({ "id": "helgoatlo", "x": 100, "y": 10 })
+
+        points.forEach((info) => {
+            let p = new Dot(info.id, info.x, info.y)
+            pieces[info.id] = p
+            addPieceIntoDom(p)
+        })
+    })
+    const style_obj = {
+        marginTop: 0, width: width + "px", height: height + "px", background: "#fff"
+    }
+    return (
+        <>
+            <svg id="graph"
+                style={style_obj}
+            />
+            <Controls />
+        </>
+
+    );
+};
+export default ForceDirectedGraph
