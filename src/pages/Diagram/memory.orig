@@ -9,43 +9,43 @@ const complex = `digraph {
     {rank=same; r r2;}
     {rank=same; m1 c1;}
     
-    r[label = "BlueFishBrownDirt"]
-    r2[label="DinoFoot"]
+    r[label = "Macaronischotel"]
+    r2[label="Burrito's"]
   
-    u [label="SquareCircle"]
+    u [label="John"]
   
     u->r [label="added"]
     u->r2 [label="added"]
   
-    r->melk [label="?"]
-    r->ei [label="LinearBox"]
-    r->MNO [label="2 SkyShoe"]
-    r->DEF [label="100 g"]
-    r->ABC [label="Aoi"]
-    r->OPQ [label="Brown Purple"]
-    r->RST [label="PinkOrange"]
+    r->melk [label="1 L"]
+    r->ei [label="2 stuks"]
+    r->macaroni [label="2 kopjes"]
+    r->oudekaas [label="100 g"]
+    r->kipbouillon [label="1 blokje"]
+    r->ham [label="200 g"]
+    r->peper [label="snufje"]
   
-    co1 [label="Chicken Teeth"]
+    co1 [label="Hoofdgerecht"]
   
     r->co1 [label="course"]
     r2->co1 [label="course"]
   
-    c1 [label="Silver"]
-    c2 [label = "Bright Black"]
-    m1 [label="Matte Water"]
+    c1 [label="20 dec 2017\n18:00"]
+    c2 [label = "30 jan 2018\n17:00"]
+    m1 [label="Nom nom.jpg"]
   
-    u->c1 [label="Low alpha red"]
-    u->c2[label = "watermelor mars"]
+    u->c1 [label="checked in"]
+    u->c2[label = "checked in"]
     c1->r [label="to"]
     c2->r [label="to"]
   
     c1->m1 [label="media"]
   
   
-    r2->DEF [label="Cat noise"]
+    r2->oudekaas [label="100 g"]
   
-    r2->Shirts [label="Whale hat"]
-    r->Pants [label="Whale hat"]
+    r2->mexicaans [label="keuken"]
+    r->hollands [label="keuken"]
   }`
 
 const simple = `graph {
