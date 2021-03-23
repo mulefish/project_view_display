@@ -1,24 +1,32 @@
-import React from "react";
-import { useHistory } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+
+//import * as d3 from "d3";
+import { Graphviz } from 'graphviz-react';
+import { Memory } from './memory.js';
 
 function Diagram() {
-    const history = useHistory()
-
-    function gotoHome() {
-        history.push('/Home')
+    const mem = new Memory()
+    let [graf, setGraf] = useState(mem.getNext())
+    function nextGraph() {
+        setGraf(mem.getNext())
     }
-
-
     return (
-        <h1>
-            This will be a d3-dataviz dot lang diagram.
-            <a href="https://renenyffenegger.ch/notes/tools/Graphviz/examples/index">https://renenyffenegger.ch/notes/tools/Graphviz/examples/index</a>
-
-
-            <br />
-            <button onClick={gotoHome}>gotoHome</button>
-
-        </h1>
+        <>
+            {mem.index}
+            <button onClick={() => nextGraph()}>nextGraph s</button>
+            <hr></hr>
+            <table border='1'>
+                <tbody>
+                    <tr>
+                        <td>
+                            <Graphviz
+                                dot={graf}
+                            />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </>
     );
 };
 export default Diagram
