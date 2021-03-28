@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import * as d3 from "d3";
 import Controls from './Controls.js'
 import { Dot } from './logic.js'
@@ -67,14 +67,9 @@ function dragended(d) {
     d3.select(this).attr("transform", "translate(" + (d.x = piece.x) + ',' + (d.y = piece.y) + ')');
     //d3.select(this).attr("transform", "translate(" + (d.x = piece.sx) + ',' + (d.y = piece.sx) + ')');
 }
-function ForceDirectedGraph({ }) {
-    // const [width, setWidth] = useState(window.innerWidth)
-    // const [height, setHeight] = useState(window.innerHeight * 0.7)
+function ForceDirectedGraph() {
     const width = window.innerWidth
     const height = window.innerHeight * 0.7
-    // function handleChange() {
-    //     console.log(" sdfk ")
-    // }
 
     useEffect(() => {
 

@@ -15,7 +15,9 @@ const Home = () => {
     function gotoDiagram() {
         history.push('/Diagram')
     }
-
+    function gotoABCDocument() {
+        history.push('/ABCDocuments')
+    }
     const style_big = {
         margin: 10, fontSize: '200px', color: "#000"
     }
@@ -58,6 +60,22 @@ const Home = () => {
 
                             </button>
                         </td>
+
+                        <td valign='top'>
+                            <button onClick={gotoABCDocument}>
+                                <div style={style_big2}>
+                                    試
+                    </div>
+                                <hr></hr>
+                                <div style={style_mid}>
+                                    ABCDoc
+                    </div>
+
+
+                            </button>
+                        </td>
+
+
                     </tr>
                 </table>
                 <a href="https://www.public.asu.edu/~rjansen/glyph_encoding.html">https://www.public.asu.edu/~rjansen/glyph_encoding.html</a>
