@@ -17,7 +17,7 @@ const Home = () => {
     }
 
     const style_big = {
-        margin: 10, fontSize: '300px', color: "#000"
+        margin: 10, fontSize: '200px', color: "#000"
     }
     const style_big2 = {
         margin: 10, fontSize: '270px', color: "#000"
@@ -36,7 +36,7 @@ const Home = () => {
 
                             <button onClick={gotoForceDirectedGraph}>
                                 <div style={style_big}>
-                                    &#11619;
+                                    乒乓
                     </div>
                                 <hr></hr>
                                 <div style={style_mid}>
@@ -60,7 +60,7 @@ const Home = () => {
                         </td>
                     </tr>
                 </table>
-
+                <a href="https://www.public.asu.edu/~rjansen/glyph_encoding.html">https://www.public.asu.edu/~rjansen/glyph_encoding.html</a>
             </center>
         </>
     )

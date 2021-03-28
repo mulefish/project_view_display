@@ -1,0 +1,1793 @@
+{
+    ".": {
+        "nickname": "b",
+        "files": [
+            {
+                "filename": "App.js",
+                "fingerprint": "30ab716e41bc615c00d2974a233d5b5f",
+                "parent": "b"
+            },
+            {
+                "filename": "file_walker.py",
+                "fingerprint": "7f50d1ccd569178aaa140975441d1acd",
+                "parent": "b"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "609325822a4191ebec7997cd7235738c",
+                "parent": "b"
+            },
+            {
+                "filename": "reportWebVitals.js",
+                "fingerprint": "f72ba5a02220a3061e191728376b451b",
+                "parent": "b"
+            },
+            {
+                "filename": "routes.js",
+                "fingerprint": "724a6a1d1b0892bfbadf9b78be444cc5",
+                "parent": "b"
+            },
+            {
+                "filename": "setupTests.js",
+                "fingerprint": "783f316491988c8da38ee90dcf16641c",
+                "parent": "b"
+            },
+            {
+                "filename": "tdd.js",
+                "fingerprint": "02a2ea79b06dd8d999a35beb285f287f",
+                "parent": "b"
+            }
+        ],
+        "daughters": [
+            ".\\redux",
+            ".\\testUtils",
+            ".\\theme"
+        ],
+        "daughters_nicknames": [
+            "bt",
+            "bu",
+            "bv"
+        ],
+        "parent": ""
+    },
+    ".\\common\\constants": {
+        "nickname": "c",
+        "files": [
+            {
+                "filename": "api-endpoints.js",
+                "fingerprint": "1fca9b9f4707f4c4eabc67871ad3f05a",
+                "parent": "c"
+            },
+            {
+                "filename": "api-status.js",
+                "fingerprint": "b42d260c1f351a5fb981b0ef27be9af0",
+                "parent": "c"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "c8f25091b8f82cb647214bc8b045ffc2",
+                "parent": "c"
+            },
+            {
+                "filename": "us-states.js",
+                "fingerprint": "49d7cea8ab3feff5d9496c9af66ec09c",
+                "parent": "c"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\common"
+    },
+    ".\\common\\util": {
+        "nickname": "d",
+        "files": [
+            {
+                "filename": "api-client.js",
+                "fingerprint": "b507288085eac3e7556b2764e7a5ca24",
+                "parent": "d"
+            },
+            {
+                "filename": "format.js",
+                "fingerprint": "d3bc48ad0ecd0f6896fc689dd8e68cf8",
+                "parent": "d"
+            },
+            {
+                "filename": "oidc-manager.js",
+                "fingerprint": "112d644487125f5d1d4056d723ea049f",
+                "parent": "d"
+            }
+        ],
+        "daughters": [
+            ".\\common\\util\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "e"
+        ],
+        "parent": ".\\common"
+    },
+    ".\\common\\util\\__tests__": {
+        "nickname": "e",
+        "files": [
+            {
+                "filename": "format.tests.js",
+                "fingerprint": "212bc82573d2b24cd1e1be8138bb8c8d",
+                "parent": "e"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\common\\util"
+    },
+    ".\\pages\\OurThing": {
+        "nickname": "f",
+        "files": [
+            {
+                "filename": "constants.js",
+                "fingerprint": "76030a8f0bd4039642bd7c0eaa37ba82",
+                "parent": "f"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "d22c88223584ecb26fb5ed829a501676",
+                "parent": "f"
+            },
+            {
+                "filename": "layout.js",
+                "fingerprint": "7492aca9c957c295687f7e121680f430",
+                "parent": "f"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\OurThing\\DocumentList",
+            ".\\pages\\OurThing\\model",
+            ".\\pages\\OurThing\\PdfViewer",
+            ".\\pages\\OurThing\\redux",
+            ".\\pages\\OurThing\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "g",
+            "h",
+            "i",
+            "k",
+            "m"
+        ],
+        "parent": ".\\pages"
+    },
+    ".\\pages\\OurThing\\DocumentList": {
+        "nickname": "g",
+        "files": [
+            {
+                "filename": "index.js",
+                "fingerprint": "1dd006da9eb07b273158c3bb49b73770",
+                "parent": "g"
+            },
+            {
+                "filename": "layout.js",
+                "fingerprint": "249da523e85abe56c8b65701b7ec4d59",
+                "parent": "g"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\OurThing"
+    },
+    ".\\pages\\OurThing\\model": {
+        "nickname": "h",
+        "files": [
+            {
+                "filename": "OurThingController.js",
+                "fingerprint": "f7cc1d1f3229d1e5f3dfbd62923dc76e",
+                "parent": "h"
+            },
+            {
+                "filename": "RedOrangePagesDataModel.js",
+                "fingerprint": "dc7d078a2cd3253df618a5304d25ee09",
+                "parent": "h"
+            },
+            {
+                "filename": "YellowBlueModel.js",
+                "fingerprint": "2ea1b6a37139c3a3c130b11bcab53b36",
+                "parent": "h"
+            },
+            {
+                "filename": "PDFModel.js",
+                "fingerprint": "6423bd26c8313e648473fd9227e7292f",
+                "parent": "h"
+            },
+            {
+                "filename": "ReceivedMailItemsDataModel.js",
+                "fingerprint": "fe104156cf2f053faa6fbdf3c1c57ac5",
+                "parent": "h"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\OurThing"
+    },
+    ".\\pages\\OurThing\\PdfViewer": {
+        "nickname": "i",
+        "files": [
+            {
+                "filename": "index.js",
+                "fingerprint": "f2ed48b0847148618cb7705f44bfec0c",
+                "parent": "i"
+            },
+            {
+                "filename": "layout.js",
+                "fingerprint": "24926963be21d2c16533f6b1cebe2b2c",
+                "parent": "i"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\OurThing\\PdfViewer\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "j"
+        ],
+        "parent": ".\\pages\\OurThing"
+    },
+    ".\\pages\\OurThing\\PdfViewer\\__tests__": {
+        "nickname": "j",
+        "files": [
+            {
+                "filename": "GOOD_ORIG.test.js",
+                "fingerprint": "64ee9003cdbd0921e245e1246f1bb9b8",
+                "parent": "j"
+            },
+            {
+                "filename": "pdfdisplay.test.js",
+                "fingerprint": "06b9c61b0678e80a36c9cd19defbdf53",
+                "parent": "j"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\OurThing\\PdfViewer"
+    },
+    ".\\pages\\OurThing\\redux": {
+        "nickname": "k",
+        "files": [
+            {
+                "filename": "actions.js",
+                "fingerprint": "e0fc5041b9bc19eb7279f3fc1f0ecd5c",
+                "parent": "k"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "516cd1dacc64439e2ffc5c3c90b9ba2a",
+                "parent": "k"
+            },
+            {
+                "filename": "reducers.js",
+                "fingerprint": "b7f5ef214c81959abcff0dfc75a40c75",
+                "parent": "k"
+            },
+            {
+                "filename": "thunks.js",
+                "fingerprint": "420c20fdac7bc8bcbb85c52353e5d49f",
+                "parent": "k"
+            },
+            {
+                "filename": "types.js",
+                "fingerprint": "198dc505ccac504f0b661fdca9848656",
+                "parent": "k"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\OurThing\\redux\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "l"
+        ],
+        "parent": ".\\pages\\OurThing"
+    },
+    ".\\pages\\OurThing\\redux\\__tests__": {
+        "nickname": "l",
+        "files": [
+            {
+                "filename": "actions.test.js",
+                "fingerprint": "3d036132be0b0386aaab45fdf9daa96f",
+                "parent": "l"
+            },
+            {
+                "filename": "reducers.test.js",
+                "fingerprint": "cd5016785298f5664e3f6e9f2970a484",
+                "parent": "l"
+            },
+            {
+                "filename": "thunks.test.js",
+                "fingerprint": "da333b5995e8b1ebb3022754a5a8b600",
+                "parent": "l"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\OurThing\\redux"
+    },
+    ".\\pages\\OurThing\\__tests__": {
+        "nickname": "m",
+        "files": [
+            {
+                "filename": "OurThing.test.js",
+                "fingerprint": "04eac9501d80c1a1d4b74bce7e8f7896",
+                "parent": "m"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\OurThing"
+    },
+    ".\\pages\\CompanyProfile": {
+        "nickname": "n",
+        "files": [
+            {
+                "filename": "constants.js",
+                "fingerprint": "74a2f0b02d6f95cade8ae7050e2bb5a9",
+                "parent": "n"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "121b90678135a2095a932c0c444670eb",
+                "parent": "n"
+            },
+            {
+                "filename": "layout.js",
+                "fingerprint": "71df4fc32db3d62caa991728c1ab3ec7",
+                "parent": "n"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\CompanyProfile\\model",
+            ".\\pages\\CompanyProfile\\redux",
+            ".\\pages\\CompanyProfile\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "o",
+            "q",
+            "s"
+        ],
+        "parent": ".\\pages"
+    },
+    ".\\pages\\CompanyProfile\\model": {
+        "nickname": "o",
+        "files": [
+            {
+                "filename": "CompanyProfileController.js",
+                "fingerprint": "5090e9ab1e90e6af8612ede8db3dfe11",
+                "parent": "o"
+            },
+            {
+                "filename": "CompanyProfileDataModel.js",
+                "fingerprint": "0b897bab7eb8b47e6bfc3254a04c32ab",
+                "parent": "o"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\CompanyProfile\\model\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "p"
+        ],
+        "parent": ".\\pages\\CompanyProfile"
+    },
+    ".\\pages\\CompanyProfile\\model\\__tests__": {
+        "nickname": "p",
+        "files": [
+            {
+                "filename": "CompanyProfileController.test.js",
+                "fingerprint": "8eeda8d3f97f01df23c50f373d6ccecc",
+                "parent": "p"
+            },
+            {
+                "filename": "CompanyProfileDataModel.test.js",
+                "fingerprint": "349dd5fe9061a7e5e1942397c3c87b2d",
+                "parent": "p"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\CompanyProfile\\model"
+    },
+    ".\\pages\\CompanyProfile\\redux": {
+        "nickname": "q",
+        "files": [
+            {
+                "filename": "actions.js",
+                "fingerprint": "8017fd5e6179a0dcfda4d752de395291",
+                "parent": "q"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "eb92612bbaadbf132a21493ff13c768b",
+                "parent": "q"
+            },
+            {
+                "filename": "reducers.js",
+                "fingerprint": "7315377011ffff1559a97e3e5f88de3d",
+                "parent": "q"
+            },
+            {
+                "filename": "thunks.js",
+                "fingerprint": "6424e298f0c516f0390646d2eb905001",
+                "parent": "q"
+            },
+            {
+                "filename": "types.js",
+                "fingerprint": "1179cc2fada2fdb05f92f24b87852242",
+                "parent": "q"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\CompanyProfile\\redux\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "r"
+        ],
+        "parent": ".\\pages\\CompanyProfile"
+    },
+    ".\\pages\\CompanyProfile\\redux\\__tests__": {
+        "nickname": "r",
+        "files": [
+            {
+                "filename": "actions.test.js",
+                "fingerprint": "92b7a3114ea33ad0458c39f7c2f93346",
+                "parent": "r"
+            },
+            {
+                "filename": "reducers.test.js",
+                "fingerprint": "b4ee68ab836a1ed9d14df483618afe3d",
+                "parent": "r"
+            },
+            {
+                "filename": "thunks.test.js",
+                "fingerprint": "1d9fd6c81d0dc1d43ae2e9ed17996469",
+                "parent": "r"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\CompanyProfile\\redux"
+    },
+    ".\\pages\\CompanyProfile\\__tests__": {
+        "nickname": "s",
+        "files": [
+            {
+                "filename": "CompanyProfile.test.js",
+                "fingerprint": "146a708e2784639179ea361a199e6922",
+                "parent": "s"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\CompanyProfile"
+    },
+    ".\\pages\\Credit": {
+        "nickname": "t",
+        "files": [
+            {
+                "filename": "constants.js",
+                "fingerprint": "e709aab86ace44f6e8bf9f4fad847ed3",
+                "parent": "t"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "8bb402f2584409a708ab28a878b3c671",
+                "parent": "t"
+            },
+            {
+                "filename": "layout.js",
+                "fingerprint": "3c90b118e5fb1e393d8ee60768015c4e",
+                "parent": "t"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\Credit\\model",
+            ".\\pages\\Credit\\redux"
+        ],
+        "daughters_nicknames": [
+            "u",
+            "w"
+        ],
+        "parent": ".\\pages"
+    },
+    ".\\pages\\Credit\\model": {
+        "nickname": "u",
+        "files": [
+            {
+                "filename": "CreditController.js",
+                "fingerprint": "4979b72b96439c0c46007b17a52421cb",
+                "parent": "u"
+            },
+            {
+                "filename": "CreditDataModel.js",
+                "fingerprint": "a4c39b4579e12625014e348461dadd35",
+                "parent": "u"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\Credit\\model\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "v"
+        ],
+        "parent": ".\\pages\\Credit"
+    },
+    ".\\pages\\Credit\\model\\__tests__": {
+        "nickname": "v",
+        "files": [
+            {
+                "filename": "CreditController.test.js",
+                "fingerprint": "3032b2f180c603c6e943a84f2100c14c",
+                "parent": "v"
+            },
+            {
+                "filename": "CreditDataModel.test.js",
+                "fingerprint": "a4ec1b51659b8e1780eef032cfe99143",
+                "parent": "v"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\Credit\\model"
+    },
+    ".\\pages\\Credit\\redux": {
+        "nickname": "w",
+        "files": [
+            {
+                "filename": "actions.js",
+                "fingerprint": "e28c5c23fb8702e2213e8b9362a3a989",
+                "parent": "w"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "4942bdfbc9929135ef7e5fb9ee00e546",
+                "parent": "w"
+            },
+            {
+                "filename": "reducers.js",
+                "fingerprint": "1bd83b46678d236be83df37180d4ce32",
+                "parent": "w"
+            },
+            {
+                "filename": "thunks.js",
+                "fingerprint": "8223eff256ee4241d0cf19778b95ced7",
+                "parent": "w"
+            },
+            {
+                "filename": "types.js",
+                "fingerprint": "b9bf78c5106ef42a491a94383441e158",
+                "parent": "w"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\Credit\\redux\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "x"
+        ],
+        "parent": ".\\pages\\Credit"
+    },
+    ".\\pages\\Credit\\redux\\__tests__": {
+        "nickname": "x",
+        "files": [
+            {
+                "filename": "actions.test.js",
+                "fingerprint": "3f0070c7b12ca1491e9cdad02860a9d2",
+                "parent": "x"
+            },
+            {
+                "filename": "reducers.test.js",
+                "fingerprint": "7df318f5d0b2497c792d703dd6c8c9aa",
+                "parent": "x"
+            },
+            {
+                "filename": "thunks.test.js",
+                "fingerprint": "ffeee9b3b7ac0f79818790579377e649",
+                "parent": "x"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\Credit\\redux"
+    },
+    ".\\pages\\DriverLicense": {
+        "nickname": "y",
+        "files": [
+            {
+                "filename": "constants.js",
+                "fingerprint": "c95626199e3b7e7c32d151f144ca6105",
+                "parent": "y"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "0f02b2b4e4b9282a27ab9f1870fcea92",
+                "parent": "y"
+            },
+            {
+                "filename": "layout.js",
+                "fingerprint": "7fffb8b97a9c2b953890d30c64e5d8c7",
+                "parent": "y"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\DriverLicense\\model",
+            ".\\pages\\DriverLicense\\redux",
+            ".\\pages\\DriverLicense\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "z",
+            "ab",
+            "ad"
+        ],
+        "parent": ".\\pages"
+    },
+    ".\\pages\\DriverLicense\\model": {
+        "nickname": "z",
+        "files": [
+            {
+                "filename": "DriversLicenseController.js",
+                "fingerprint": "b228f13e2d6e6213e01bd56b3d16a9da",
+                "parent": "z"
+            },
+            {
+                "filename": "DriversLicenseDataModel.js",
+                "fingerprint": "64cabd5c9957735930121cd3fa3e61c0",
+                "parent": "z"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\DriverLicense\\model\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "aa"
+        ],
+        "parent": ".\\pages\\DriverLicense"
+    },
+    ".\\pages\\DriverLicense\\model\\__tests__": {
+        "nickname": "aa",
+        "files": [
+            {
+                "filename": "DriversLicenseController.test.js",
+                "fingerprint": "53f11bb1df34f884c27d830f23045a77",
+                "parent": "aa"
+            },
+            {
+                "filename": "DriversLicenseDataModel.test.js",
+                "fingerprint": "4f07cefdc67e7286b56e131e16644621",
+                "parent": "aa"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\DriverLicense\\model"
+    },
+    ".\\pages\\DriverLicense\\redux": {
+        "nickname": "ab",
+        "files": [
+            {
+                "filename": "actions.js",
+                "fingerprint": "2788b636f190e973ef881678441767a8",
+                "parent": "ab"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "e7ce97927bf09132ee0ebfda70a3f08f",
+                "parent": "ab"
+            },
+            {
+                "filename": "reducers.js",
+                "fingerprint": "e53b152c0884ca0ee5e69f94fcb42831",
+                "parent": "ab"
+            },
+            {
+                "filename": "thunks.js",
+                "fingerprint": "10de4f6ac2c75e0d3b944a0e32973b04",
+                "parent": "ab"
+            },
+            {
+                "filename": "types.js",
+                "fingerprint": "cbfb816c7d5c11a0bc2e2dcd7e48e87d",
+                "parent": "ab"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\DriverLicense\\redux\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "ac"
+        ],
+        "parent": ".\\pages\\DriverLicense"
+    },
+    ".\\pages\\DriverLicense\\redux\\__tests__": {
+        "nickname": "ac",
+        "files": [
+            {
+                "filename": "actions.test.js",
+                "fingerprint": "59e099654d056e592d8274283168c4f7",
+                "parent": "ac"
+            },
+            {
+                "filename": "reducers.test.js",
+                "fingerprint": "b92d04f77e5181db122eaa557ad7a15e",
+                "parent": "ac"
+            },
+            {
+                "filename": "thunks.test.js",
+                "fingerprint": "58203ab3e6c74bb397ec30c0043a6178",
+                "parent": "ac"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\DriverLicense\\redux"
+    },
+    ".\\pages\\DriverLicense\\__tests__": {
+        "nickname": "ad",
+        "files": [
+            {
+                "filename": "DriverLicense.test.js",
+                "fingerprint": "5057e8a85b5d8352060fdd58eadd84fb",
+                "parent": "ad"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\DriverLicense"
+    },
+    ".\\pages\\Home": {
+        "nickname": "ae",
+        "files": [
+            {
+                "filename": "constants.js",
+                "fingerprint": "cda05156ef3cd1dc14331a3687110328",
+                "parent": "ae"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "33173f1bb362b531a6877be3b56e0d93",
+                "parent": "ae"
+            },
+            {
+                "filename": "layout.js",
+                "fingerprint": "65c7611f755fe96acfbaa68aafb13a67",
+                "parent": "ae"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\Home\\model",
+            ".\\pages\\Home\\redux"
+        ],
+        "daughters_nicknames": [
+            "af",
+            "ah"
+        ],
+        "parent": ".\\pages"
+    },
+    ".\\pages\\Home\\model": {
+        "nickname": "af",
+        "files": [
+            {
+                "filename": "HomeAlertsController.js",
+                "fingerprint": "e523afcd03d0a962aa45722a3da1df02",
+                "parent": "af"
+            },
+            {
+                "filename": "HomeAlertsDataModel.js",
+                "fingerprint": "3f7cff2e8c50df178557626dd8903b2b",
+                "parent": "af"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\Home\\model\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "ag"
+        ],
+        "parent": ".\\pages\\Home"
+    },
+    ".\\pages\\Home\\model\\__tests__": {
+        "nickname": "ag",
+        "files": [
+            {
+                "filename": "HomeAlertsController.test.js",
+                "fingerprint": "2d89a30c7602e0c2aa48bc306e3032a5",
+                "parent": "ag"
+            },
+            {
+                "filename": "HomeAlertsDataModel.test.js",
+                "fingerprint": "2d68913516000578db4fc3ae21312360",
+                "parent": "ag"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\Home\\model"
+    },
+    ".\\pages\\Home\\redux": {
+        "nickname": "ah",
+        "files": [
+            {
+                "filename": "actions.js",
+                "fingerprint": "6ba7ad4713da41551ac00b4ad3829352",
+                "parent": "ah"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "bf422e612217f99730d368dd1f8f896f",
+                "parent": "ah"
+            },
+            {
+                "filename": "reducers.js",
+                "fingerprint": "92c73c01235644617fc42b657d442784",
+                "parent": "ah"
+            },
+            {
+                "filename": "thunks.js",
+                "fingerprint": "adbddc979e15ce024c44a54774a304d4",
+                "parent": "ah"
+            },
+            {
+                "filename": "types.js",
+                "fingerprint": "d22fd9444a26d887d2cc17007ef5f6a7",
+                "parent": "ah"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\Home\\redux\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "ai"
+        ],
+        "parent": ".\\pages\\Home"
+    },
+    ".\\pages\\Home\\redux\\__tests__": {
+        "nickname": "ai",
+        "files": [
+            {
+                "filename": "actions.test.js",
+                "fingerprint": "ec7451b480047c0576a0308b1d5e83ec",
+                "parent": "ai"
+            },
+            {
+                "filename": "reducers.test.js",
+                "fingerprint": "d156a1449847107efa345c27d1e6367e",
+                "parent": "ai"
+            },
+            {
+                "filename": "thunks.test.js",
+                "fingerprint": "f32335fb968425d719376ffac0b7a43f",
+                "parent": "ai"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\Home\\redux"
+    },
+    ".\\pages\\IncomeCalculator": {
+        "nickname": "aj",
+        "files": [
+            {
+                "filename": "constants.js",
+                "fingerprint": "bf9d7e71fd5d88fea49c6230d5e04b5f",
+                "parent": "aj"
+            },
+            {
+                "filename": "Footer.js",
+                "fingerprint": "9565817637add425b90970ab8e017601",
+                "parent": "aj"
+            },
+            {
+                "filename": "FooterContainer.js",
+                "fingerprint": "57624c606a2dbd2a0b06b20fa43035c9",
+                "parent": "aj"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "4012dc308a43e61e5502ffc4cd048cd9",
+                "parent": "aj"
+            },
+            {
+                "filename": "layout.js",
+                "fingerprint": "908fdc38ec32abe3b39505b3aa7cd679",
+                "parent": "aj"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\IncomeCalculator\\BorrowerInfo",
+            ".\\pages\\IncomeCalculator\\redux",
+            ".\\pages\\IncomeCalculator\\Sidebar",
+            ".\\pages\\IncomeCalculator\\utils",
+            ".\\pages\\IncomeCalculator\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "ak",
+            "ar",
+            "at",
+            "av",
+            "aw"
+        ],
+        "parent": ".\\pages"
+    },
+    ".\\pages\\IncomeCalculator\\BorrowerInfo": {
+        "nickname": "ak",
+        "files": [
+            {
+                "filename": "index.js",
+                "fingerprint": "9771010cb6efa68361d6aa32a10d91b3",
+                "parent": "ak"
+            },
+            {
+                "filename": "layout.js",
+                "fingerprint": "c988a1f6d5d519f83ca02d5102062cfe",
+                "parent": "ak"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\IncomeCalculator"
+    },
+    ".\\pages\\IncomeCalculator\\Pages\\DataVerification": {
+        "nickname": "al",
+        "files": [
+            {
+                "filename": "index.js",
+                "fingerprint": "3e403be856f8eb2457ebaba3b484102c",
+                "parent": "al"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\IncomeCalculator\\Pages"
+    },
+    ".\\pages\\IncomeCalculator\\Pages\\DocumentSelection": {
+        "nickname": "am",
+        "files": [
+            {
+                "filename": "index.js",
+                "fingerprint": "839cdd147a1ee1ecf752c415f998cd18",
+                "parent": "am"
+            },
+            {
+                "filename": "layout.js",
+                "fingerprint": "05eff7c8483844dca44d0f0a61c1946d",
+                "parent": "am"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\IncomeCalculator\\Pages"
+    },
+    ".\\pages\\IncomeCalculator\\Pages\\IncomeSelection": {
+        "nickname": "an",
+        "files": [
+            {
+                "filename": "index.js",
+                "fingerprint": "b7357739e3b6a11a521c34ca20ced8d5",
+                "parent": "an"
+            },
+            {
+                "filename": "layout.js",
+                "fingerprint": "039b3b320fcfc47e18fb05767247f767",
+                "parent": "an"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\IncomeCalculator\\Pages"
+    },
+    ".\\pages\\IncomeCalculator\\Pages\\RunCalculations": {
+        "nickname": "ao",
+        "files": [
+            {
+                "filename": "Calculate.js",
+                "fingerprint": "476f6b4d5c83ee7e9ca4291430673d37",
+                "parent": "ao"
+            },
+            {
+                "filename": "CalculationResult.js",
+                "fingerprint": "a3f59e247f5de2bae946be51b6e60a38",
+                "parent": "ao"
+            },
+            {
+                "filename": "CalculationResults.js",
+                "fingerprint": "7e35b74cb074ffc27b22e4319b1d99d7",
+                "parent": "ao"
+            },
+            {
+                "filename": "CalculationResultsContainer.js",
+                "fingerprint": "82cc7f3405a048a6034bd4793ad73efd",
+                "parent": "ao"
+            },
+            {
+                "filename": "Comments.js",
+                "fingerprint": "1213ea719c9b4db9a2dfd2480858ea87",
+                "parent": "ao"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "de8371749cfd23db6f9c35b2cbee7c75",
+                "parent": "ao"
+            },
+            {
+                "filename": "SelectedYear.js",
+                "fingerprint": "6dcd53860448ab55d96b28ab78ef03a4",
+                "parent": "ao"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\IncomeCalculator\\Pages\\RunCalculations\\styles"
+        ],
+        "daughters_nicknames": [
+            "ap"
+        ],
+        "parent": ".\\pages\\IncomeCalculator\\Pages"
+    },
+    ".\\pages\\IncomeCalculator\\Pages\\RunCalculations\\styles": {
+        "nickname": "ap",
+        "files": [
+            {
+                "filename": "CalculationResultTable.js",
+                "fingerprint": "fc5bf224406b2c8595503619cec06ded",
+                "parent": "ap"
+            },
+            {
+                "filename": "PlusButton.js",
+                "fingerprint": "188cadcd14f7ff58af83b974973af89c",
+                "parent": "ap"
+            },
+            {
+                "filename": "TableRow.js",
+                "fingerprint": "f37ea4c539036d99a87ee946fa742841",
+                "parent": "ap"
+            },
+            {
+                "filename": "YearContainer.js",
+                "fingerprint": "5718eb78827894a77cc37f45877b41ea",
+                "parent": "ap"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\IncomeCalculator\\Pages\\RunCalculations"
+    },
+    ".\\pages\\IncomeCalculator\\Pages\\styles": {
+        "nickname": "aq",
+        "files": [
+            {
+                "filename": "PageContainer.js",
+                "fingerprint": "ec56ba43585654dabede92fba6cb39d7",
+                "parent": "aq"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\IncomeCalculator\\Pages"
+    },
+    ".\\pages\\IncomeCalculator\\redux": {
+        "nickname": "ar",
+        "files": [
+            {
+                "filename": "actions.js",
+                "fingerprint": "35047ba66b10bd41c40e8775357abd46",
+                "parent": "ar"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "c7714ebdcd0b62ee011ebf13fdb99b92",
+                "parent": "ar"
+            },
+            {
+                "filename": "reducers.js",
+                "fingerprint": "85b5e0c995b2b08521f029fb4814f9fd",
+                "parent": "ar"
+            },
+            {
+                "filename": "thunks.js",
+                "fingerprint": "76df5037eb47fd4c9ce969795eda8bf1",
+                "parent": "ar"
+            },
+            {
+                "filename": "types.js",
+                "fingerprint": "cd1c1f5eb08e6393c5ee57a20b95aad4",
+                "parent": "ar"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\IncomeCalculator\\redux\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "as"
+        ],
+        "parent": ".\\pages\\IncomeCalculator"
+    },
+    ".\\pages\\IncomeCalculator\\redux\\__tests__": {
+        "nickname": "as",
+        "files": [
+            {
+                "filename": "actions.test.js",
+                "fingerprint": "a206cf69ea3dea7d1a3f4766bb2fe8e2",
+                "parent": "as"
+            },
+            {
+                "filename": "reducers.test.js",
+                "fingerprint": "3dd9c5118f020ca2294a022571b0b173",
+                "parent": "as"
+            },
+            {
+                "filename": "thunks.test.js",
+                "fingerprint": "6bdc3a857045b5644a836cc1bd908ca1",
+                "parent": "as"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\IncomeCalculator\\redux"
+    },
+    ".\\pages\\IncomeCalculator\\Sidebar": {
+        "nickname": "at",
+        "files": [
+            {
+                "filename": "CommentBox.js",
+                "fingerprint": "f6c5c9c9a89118134c96fcf437c36649",
+                "parent": "at"
+            },
+            {
+                "filename": "IncomeSummary.js",
+                "fingerprint": "99fc105b5575cc92d5eb519f4bb56ac9",
+                "parent": "at"
+            },
+            {
+                "filename": "IncomeSummaryContainer.js",
+                "fingerprint": "bd5751942807442c71071ac9fae77f8e",
+                "parent": "at"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "a01d036fccb91222aac8767757a4648a",
+                "parent": "at"
+            },
+            {
+                "filename": "Navigation.js",
+                "fingerprint": "3d48510188172466fd8ccaa12769961f",
+                "parent": "at"
+            },
+            {
+                "filename": "NavigationContainer.js",
+                "fingerprint": "6b5d4d2b519b6d97504e9e09704ee046",
+                "parent": "at"
+            },
+            {
+                "filename": "NavigationItem.js",
+                "fingerprint": "979aba3ecf0a8eadd9b87ba8a9a1f4fe",
+                "parent": "at"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\IncomeCalculator\\Sidebar\\styles"
+        ],
+        "daughters_nicknames": [
+            "au"
+        ],
+        "parent": ".\\pages\\IncomeCalculator"
+    },
+    ".\\pages\\IncomeCalculator\\Sidebar\\styles": {
+        "nickname": "au",
+        "files": [
+            {
+                "filename": "Accordion.js",
+                "fingerprint": "bff3f7cf35fbc6cd9dcc699146667273",
+                "parent": "au"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\IncomeCalculator\\Sidebar"
+    },
+    ".\\pages\\IncomeCalculator\\utils": {
+        "nickname": "av",
+        "files": [
+            {
+                "filename": "reduxTestConstants.js",
+                "fingerprint": "551a521863544442debc6f552c7d5624",
+                "parent": "av"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\IncomeCalculator"
+    },
+    ".\\pages\\IncomeCalculator\\__tests__": {
+        "nickname": "aw",
+        "files": [
+            {
+                "filename": "Footer.test.js",
+                "fingerprint": "10c4d5a60b1d89ca7be587b10b333741",
+                "parent": "aw"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\IncomeCalculator"
+    },
+    ".\\pages\\IncomeCalculatorNew": {
+        "nickname": "ax",
+        "files": [
+            {
+                "filename": "constants.js",
+                "fingerprint": "bf9d7e71fd5d88fea49c6230d5e04b5f",
+                "parent": "ax"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "c9ab4bf1646b4514c2f2121b169ec932",
+                "parent": "ax"
+            },
+            {
+                "filename": "layout.js",
+                "fingerprint": "0a56c3c9032122c354dd5760f78ee829",
+                "parent": "ax"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\IncomeCalculatorNew\\model",
+            ".\\pages\\IncomeCalculatorNew\\redux",
+            ".\\pages\\IncomeCalculatorNew\\utils"
+        ],
+        "daughters_nicknames": [
+            "ay",
+            "bc",
+            "be"
+        ],
+        "parent": ".\\pages"
+    },
+    ".\\pages\\IncomeCalculatorNew\\model": {
+        "nickname": "ay",
+        "files": [
+            {
+                "filename": "AnnualDetailDataModel.js",
+                "fingerprint": "d20b60a887731531f235ec0d803aecb0",
+                "parent": "ay"
+            },
+            {
+                "filename": "BorrowerDataModel.js",
+                "fingerprint": "f4fa59d6eb39c1a5d4a24d7f59dd8ef4",
+                "parent": "ay"
+            },
+            {
+                "filename": "BorrowerInfoDataController.js",
+                "fingerprint": "616fc7e2f6f4eb0527adf15e064ae388",
+                "parent": "ay"
+            },
+            {
+                "filename": "BorrowerInfoDataModel.js",
+                "fingerprint": "29b7ecde669f684ac8f995fc0cd6bc43",
+                "parent": "ay"
+            },
+            {
+                "filename": "CalculationResultDataModel.js",
+                "fingerprint": "237793e6f217df32a4965559d396ccdf",
+                "parent": "ay"
+            },
+            {
+                "filename": "IncomeRecordDataModel.js",
+                "fingerprint": "c32b665a389cd1d1a70a3e902218a3fd",
+                "parent": "ay"
+            },
+            {
+                "filename": "LoanInfoDataModel.js",
+                "fingerprint": "1bd746b88da918dfd73eb575e18ac41e",
+                "parent": "ay"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\IncomeCalculatorNew\\model\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "az"
+        ],
+        "parent": ".\\pages\\IncomeCalculatorNew"
+    },
+    ".\\pages\\IncomeCalculatorNew\\model\\__tests__": {
+        "nickname": "az",
+        "files": [
+            {
+                "filename": "BorrowerInfoController.test.js",
+                "fingerprint": "eae99e9423517a9beed09742cefc34dd",
+                "parent": "az"
+            },
+            {
+                "filename": "BorrowerInfoDataModel.test.js",
+                "fingerprint": "2d66c200e0b331f9c89f26d0acd9cd43",
+                "parent": "az"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\IncomeCalculatorNew\\model"
+    },
+    ".\\pages\\IncomeCalculatorNew\\Pages\\IncomeSelection": {
+        "nickname": "ba",
+        "files": [
+            {
+                "filename": "index.js",
+                "fingerprint": "570c1d925550d2b44496eb20afe6a52e",
+                "parent": "ba"
+            },
+            {
+                "filename": "layout.js",
+                "fingerprint": "94a594e5672c121b27f8af0e862a9860",
+                "parent": "ba"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\IncomeCalculatorNew\\Pages\\IncomeSelection\\_tests_"
+        ],
+        "daughters_nicknames": [
+            "bb"
+        ],
+        "parent": ".\\pages\\IncomeCalculatorNew\\Pages"
+    },
+    ".\\pages\\IncomeCalculatorNew\\Pages\\IncomeSelection\\_tests_": {
+        "nickname": "bb",
+        "files": [
+            {
+                "filename": "IncomeSelection.test.js",
+                "fingerprint": "33093d0c0572e22762822562bc268a6a",
+                "parent": "bb"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\IncomeCalculatorNew\\Pages\\IncomeSelection"
+    },
+    ".\\pages\\IncomeCalculatorNew\\redux": {
+        "nickname": "bc",
+        "files": [
+            {
+                "filename": "actions.js",
+                "fingerprint": "4382f33235d65d42b3a7c8d73436b719",
+                "parent": "bc"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "6d505ebd024563afbc71c9982d8654c7",
+                "parent": "bc"
+            },
+            {
+                "filename": "reducers.js",
+                "fingerprint": "13c9995d32dc77ec04705f26ead4bf52",
+                "parent": "bc"
+            },
+            {
+                "filename": "thunks.js",
+                "fingerprint": "2115f5f1e6bc6a74167c3bf856d154dd",
+                "parent": "bc"
+            },
+            {
+                "filename": "types.js",
+                "fingerprint": "c0ba1bbb684d3774caada051538fb2ba",
+                "parent": "bc"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\IncomeCalculatorNew\\redux\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "bd"
+        ],
+        "parent": ".\\pages\\IncomeCalculatorNew"
+    },
+    ".\\pages\\IncomeCalculatorNew\\redux\\__tests__": {
+        "nickname": "bd",
+        "files": [
+            {
+                "filename": "actions.test.js",
+                "fingerprint": "a96f191111a70455c16a215311fa26e7",
+                "parent": "bd"
+            },
+            {
+                "filename": "reducers.test.js",
+                "fingerprint": "a65744cc8f7cb8b491d19958bc5fae18",
+                "parent": "bd"
+            },
+            {
+                "filename": "thunks.test.js",
+                "fingerprint": "fb4897ad64d2c3c392e864122f9d21c7",
+                "parent": "bd"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\IncomeCalculatorNew\\redux"
+    },
+    ".\\pages\\IncomeCalculatorNew\\utils": {
+        "nickname": "be",
+        "files": [
+            {
+                "filename": "reduxTestConstants.js",
+                "fingerprint": "5bfc462242e46bce3a01e3237ceb6fd4",
+                "parent": "be"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\IncomeCalculatorNew"
+    },
+    ".\\pages\\NotFound": {
+        "nickname": "bf",
+        "files": [
+            {
+                "filename": "index.js",
+                "fingerprint": "c9045c1c12e6f90f870699cc61b72309",
+                "parent": "bf"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\NotFound\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "bg"
+        ],
+        "parent": ".\\pages"
+    },
+    ".\\pages\\NotFound\\__tests__": {
+        "nickname": "bg",
+        "files": [
+            {
+                "filename": "NotFound.test.js",
+                "fingerprint": "0d496286dd8395b8dae17d82be283e63",
+                "parent": "bg"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\NotFound"
+    },
+    ".\\pages\\PurchaseAgreement": {
+        "nickname": "bh",
+        "files": [
+            {
+                "filename": "constants.js",
+                "fingerprint": "e51e0207faea683267376507478fcb9f",
+                "parent": "bh"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "70565aa10a89030cdd0e4b6a1a1db69d",
+                "parent": "bh"
+            },
+            {
+                "filename": "layout.js",
+                "fingerprint": "48f7f3fe48e5d473e00a86e9265ed61c",
+                "parent": "bh"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\PurchaseAgreement\\model",
+            ".\\pages\\PurchaseAgreement\\redux",
+            ".\\pages\\PurchaseAgreement\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "bi",
+            "bk",
+            "bm"
+        ],
+        "parent": ".\\pages"
+    },
+    ".\\pages\\PurchaseAgreement\\model": {
+        "nickname": "bi",
+        "files": [
+            {
+                "filename": "PurchaseAgreementController.js",
+                "fingerprint": "2b713c0164e189d1775dee640c25c8fd",
+                "parent": "bi"
+            },
+            {
+                "filename": "PurchaseAgreementDataModel.js",
+                "fingerprint": "9ac60021cdf457228580c6c967ea1bb8",
+                "parent": "bi"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\PurchaseAgreement\\model\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "bj"
+        ],
+        "parent": ".\\pages\\PurchaseAgreement"
+    },
+    ".\\pages\\PurchaseAgreement\\model\\__tests__": {
+        "nickname": "bj",
+        "files": [
+            {
+                "filename": "PurchaseAgreementController.test.js",
+                "fingerprint": "c497851852bca983a22354e53ca74147",
+                "parent": "bj"
+            },
+            {
+                "filename": "PurchaseAgreementDataModel.test.js",
+                "fingerprint": "28e3cdecd74f976c8df4cf23192f5dab",
+                "parent": "bj"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\PurchaseAgreement\\model"
+    },
+    ".\\pages\\PurchaseAgreement\\redux": {
+        "nickname": "bk",
+        "files": [
+            {
+                "filename": "actions.js",
+                "fingerprint": "04356a8db34abe3955fcd650336381ac",
+                "parent": "bk"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "ecce574876ae64e2a8a23bc2c5efaf61",
+                "parent": "bk"
+            },
+            {
+                "filename": "reducers.js",
+                "fingerprint": "45b89126f17e5366560f4bc0d7ffe33b",
+                "parent": "bk"
+            },
+            {
+                "filename": "thunks.js",
+                "fingerprint": "047fb6f741f5450b084b6f6a57b575a4",
+                "parent": "bk"
+            },
+            {
+                "filename": "types.js",
+                "fingerprint": "59fa3ce613a95b8b32193bed526cafbe",
+                "parent": "bk"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\PurchaseAgreement\\redux\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "bl"
+        ],
+        "parent": ".\\pages\\PurchaseAgreement"
+    },
+    ".\\pages\\PurchaseAgreement\\redux\\__tests__": {
+        "nickname": "bl",
+        "files": [
+            {
+                "filename": "actions.test.js",
+                "fingerprint": "0f9f7acc791f8d36a521567819069271",
+                "parent": "bl"
+            },
+            {
+                "filename": "reducers.test.js",
+                "fingerprint": "e17aab200d57db8ae1d072a0e71902d5",
+                "parent": "bl"
+            },
+            {
+                "filename": "thunks.test.js",
+                "fingerprint": "e6a9833c5c49ca2e5cd7ae02fc9c0ac2",
+                "parent": "bl"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\PurchaseAgreement\\redux"
+    },
+    ".\\pages\\PurchaseAgreement\\__tests__": {
+        "nickname": "bm",
+        "files": [
+            {
+                "filename": "PurchaseAgreement.test.js",
+                "fingerprint": "42f7a7eef4faaf04c3343541d092445b",
+                "parent": "bm"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\PurchaseAgreement"
+    },
+    ".\\pages\\UserProfile": {
+        "nickname": "bn",
+        "files": [
+            {
+                "filename": "constants.js",
+                "fingerprint": "397c7d8f87b483b659d12bbf7ea3085a",
+                "parent": "bn"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "5e9e6e7993f1d5aaf5fabf05b966cd5d",
+                "parent": "bn"
+            },
+            {
+                "filename": "layout.js",
+                "fingerprint": "d142d956c950c9d6854861ed791f1920",
+                "parent": "bn"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\UserProfile\\model",
+            ".\\pages\\UserProfile\\redux",
+            ".\\pages\\UserProfile\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "bo",
+            "bq",
+            "bs"
+        ],
+        "parent": ".\\pages"
+    },
+    ".\\pages\\UserProfile\\model": {
+        "nickname": "bo",
+        "files": [
+            {
+                "filename": "UserProfileController.js",
+                "fingerprint": "4dd6189074fa3dcb121d017c3894277e",
+                "parent": "bo"
+            },
+            {
+                "filename": "UserProfileDataModel.js",
+                "fingerprint": "56daedbdf93ce132261a21257614dfc9",
+                "parent": "bo"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\UserProfile\\model\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "bp"
+        ],
+        "parent": ".\\pages\\UserProfile"
+    },
+    ".\\pages\\UserProfile\\model\\__tests__": {
+        "nickname": "bp",
+        "files": [
+            {
+                "filename": "UserProfileController.test.js",
+                "fingerprint": "dab867fc243e030fcd2f4d1764acf588",
+                "parent": "bp"
+            },
+            {
+                "filename": "UserProfileDataModel.test.js",
+                "fingerprint": "0841b0e8281821ba19696118368ba757",
+                "parent": "bp"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\UserProfile\\model"
+    },
+    ".\\pages\\UserProfile\\redux": {
+        "nickname": "bq",
+        "files": [
+            {
+                "filename": "actions.js",
+                "fingerprint": "a4072896ea47b131e14bd8a0027335b8",
+                "parent": "bq"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "f80d8d5856b905c725a34b1e4e1b5c6b",
+                "parent": "bq"
+            },
+            {
+                "filename": "reducers.js",
+                "fingerprint": "6f44791d920badc2467fd0a79bf3c926",
+                "parent": "bq"
+            },
+            {
+                "filename": "thunks.js",
+                "fingerprint": "cb909dd354fa1975ec57b17eeb82cfa5",
+                "parent": "bq"
+            },
+            {
+                "filename": "types.js",
+                "fingerprint": "b96d52d88140198ec3f4a4f1038082cc",
+                "parent": "bq"
+            }
+        ],
+        "daughters": [
+            ".\\pages\\UserProfile\\redux\\__tests__"
+        ],
+        "daughters_nicknames": [
+            "br"
+        ],
+        "parent": ".\\pages\\UserProfile"
+    },
+    ".\\pages\\UserProfile\\redux\\__tests__": {
+        "nickname": "br",
+        "files": [
+            {
+                "filename": "actions.test.js",
+                "fingerprint": "2fc0493e917ac86bf5ab42e8bfa14bdd",
+                "parent": "br"
+            },
+            {
+                "filename": "reducers.test.js",
+                "fingerprint": "3e8be276e673a4002f168c4f26172ffd",
+                "parent": "br"
+            },
+            {
+                "filename": "thunks.test.js",
+                "fingerprint": "32ca05db08cd89cf2d2b24761c723e3a",
+                "parent": "br"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\UserProfile\\redux"
+    },
+    ".\\pages\\UserProfile\\__tests__": {
+        "nickname": "bs",
+        "files": [
+            {
+                "filename": "UserProfile.test.js",
+                "fingerprint": "2d7668fd5dcd66fb61b43f48c960b4db",
+                "parent": "bs"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": ".\\pages\\UserProfile"
+    },
+    ".\\redux": {
+        "nickname": "bt",
+        "files": [
+            {
+                "filename": "index.js",
+                "fingerprint": "7165290edb727b0a25e232ac1b47d06f",
+                "parent": "bt"
+            },
+            {
+                "filename": "reducers.js",
+                "fingerprint": "39c9fde04bc72f3a2d2da618255189b1",
+                "parent": "bt"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": "."
+    },
+    ".\\testUtils": {
+        "nickname": "bu",
+        "files": [
+            {
+                "filename": "index.js",
+                "fingerprint": "a763b2d45da125e50831a8743412f5d3",
+                "parent": "bu"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": "."
+    },
+    ".\\theme": {
+        "nickname": "bv",
+        "files": [
+            {
+                "filename": "colors.js",
+                "fingerprint": "fae7257aec7af34c592423d649184c90",
+                "parent": "bv"
+            },
+            {
+                "filename": "index.js",
+                "fingerprint": "ab09752935f398605c8c505c36b0aea9",
+                "parent": "bv"
+            },
+            {
+                "filename": "styles.js",
+                "fingerprint": "54aa19ffcbef83c3306ffc5343fcfb9f",
+                "parent": "bv"
+            },
+            {
+                "filename": "typography.js",
+                "fingerprint": "7ab8a0bcac1a8d1558e3874f661524b3",
+                "parent": "bv"
+            }
+        ],
+        "daughters": [],
+        "daughters_nicknames": [],
+        "parent": "."
+    }
+}
