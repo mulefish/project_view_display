@@ -33,50 +33,55 @@ const Home = () => {
         <>
             <center>
                 <table border='1'>
-                    <tr>
-                        <td valign='top'>
+                    <tbody>
+                        <tr>
+                            <td valign='top'>
 
-                            <button onClick={gotoForceDirectedGraph}>
-                                <div style={style_big}>
-                                    乒乓
+                                <button onClick={gotoForceDirectedGraph}>
+                                    <div style={style_big}>
+                                        ᛤ
+                                        {/* 乒乓 */}
+                                    </div>
+                                    <hr></hr>
+                                    <div style={style_mid}>
+                                        ForceDirectedGraph
                     </div>
-                                <hr></hr>
-                                <div style={style_mid}>
-                                    ForceDirectedGraph
+                                </button>
+                            </td>
+                            <td>&nbsp;</td>
+                            <td valign='top'>
+                                <button onClick={gotoDiagram}>
+                                    <div style={style_big2}>
+                                        &#10730;
                     </div>
-                            </button>
-                        </td>
-                        <td>&nbsp;</td>
-                        <td valign='top'>
-                            <button onClick={gotoDiagram}>
-                                <div style={style_big2}>
-                                    &#10730;
-                    </div>
-                                <hr></hr>
-                                <div style={style_mid}>
-                                    Diagram/Flowchart
-                    </div>
-
-
-                            </button>
-                        </td>
-
-                        <td valign='top'>
-                            <button onClick={gotoABCDocument}>
-                                <div style={style_big2}>
-                                    試
-                    </div>
-                                <hr></hr>
-                                <div style={style_mid}>
-                                    ABCDoc
+                                    <hr></hr>
+                                    <div style={style_mid}>
+                                        Diagram/Flowchart
                     </div>
 
 
-                            </button>
-                        </td>
+                                </button>
+                            </td>
+
+                            <td valign='top'>
+                                <button onClick={gotoABCDocument}>
+                                    <div style={style_big2}>
+                                        🚀
+                                        {/* 試 */}
+                                    </div>
+                                    <hr></hr>
+                                    <div style={style_mid}>
+                                        ABCDoc
+                    </div>
 
 
-                    </tr>
+                                </button>
+                            </td>
+
+
+                        </tr>
+                    </tbody>
+
                 </table>
                 <a href="https://www.public.asu.edu/~rjansen/glyph_encoding.html">https://www.public.asu.edu/~rjansen/glyph_encoding.html</a>
             </center>

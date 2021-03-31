@@ -8,23 +8,25 @@ const SearchMechanism = ({
     listOfClassificationsFromTheBackEnd,
 }) => {
 
-    function DOIT() {
-        alert(" doit ")
+    function showValue() {
         getListOfClassificationsViaRestfulEndpoint()
     }
 
 
     useEffect(() => {
         (async () => {
+
             await getListOfClassificationsViaRestfulEndpoint();
             console.log(
-                JSON.stringify(listOfClassificationsFromTheBackEnd, null, 2)
+                JSON.stringify(listOfClassificationsFromTheBackEnd, null, 20)
             );
         })();
     }, [getListOfClassificationsViaRestfulEndpoint]);
 
     return <>Hello
-        <button onClick={DOIT}>DOIT</button>
+        <button onClick={showValue}>showValue</button>
+
+        { JSON.stringify(listOfClassificationsFromTheBackEnd, null, 10)}
 
     </>;
 };

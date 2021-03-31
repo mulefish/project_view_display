@@ -9,7 +9,6 @@ const getListOfClassificationsViaRestfulEndpoint = () => async (dispatch) => {
         { id: "three", classification: "eebboo" },
         { r: Math.random() }
     ]
-    alert(JSON.stringify(dummy, null, 2))
     dispatch(actions.abc_it_worked(dummy));
     //    dispatch(actions.abc_Failbot(error));
 };
