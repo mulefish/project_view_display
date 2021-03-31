@@ -2,7 +2,7 @@
 // 2: No JSX - Just vanilla javascript 
 
 const complex = `digraph {
-    size="6"
+    size="20"
     rankdir = LR
     graph [splines = true]
     node[color="black", shape="rectangle", overlap=false]
@@ -55,8 +55,89 @@ const simple = `graph {
     grandparent --  "parent B";
   }`
 
+const boxey = `
+digraph D {
 
+    subgraph cluster_p {
+      label = "Parent";
+  
+      subgraph cluster_c1 {
+        label = "Child one";
+        a;
+  
+        subgraph cluster_gc_1 {
+          label = "Grand-Child one";
+           b;
+        }
+        subgraph cluster_gc_2 {
+          label = "Grand-Child two";
+            c;
+            d;
+        }
+  
+      }
+  
+      subgraph cluster_c2 {
+        label = "Child two";
+        e;
+      }
+    }
+  }
+`
+let thing = `digraph D {
 
+    node [shape=plaintext fontname="Sans serif" fontsize="8"];
+  
+    task_menu [ label=<
+     <table border="1" cellborder="0" cellspacing="1">
+       <tr><td align="left"><b>Task 1</b></td></tr>
+       <tr><td align="left">Choose Menu</td></tr>
+       <tr><td align="left"><font color="darkgreen">done</font></td></tr>
+     </table>>];
+  
+    task_ingredients [ label=<
+     <table border="1" cellborder="0" cellspacing="1">
+       <tr><td align="left"><b>Task 2</b></td></tr>
+       <tr><td align="left">Buy ingredients</td></tr>
+       <tr><td align="left"><font color="darkgreen">done</font></td></tr>
+     </table>>];
+  
+    task_invitation [ label=<
+     <table border="1" cellborder="0" cellspacing="1">
+       <tr><td align="left"><b>Task 4</b></td></tr>
+       <tr><td align="left">Send invitation</td></tr>
+       <tr><td align="left"><font color="darkgreen">done</font></td></tr>
+     </table>>];
+  
+    task_cook [ label=<
+     <table border="1" cellborder="0" cellspacing="1">
+       <tr><td align="left"><b>Task 5</b></td></tr>
+       <tr><td align="left">Cook</td></tr>
+       <tr><td align="left"><font color="red">todo</font></td></tr>
+     </table>>];
+  
+    task_table[ label=<
+     <table border="1" cellborder="0" cellspacing="1">
+       <tr><td align="left"><b>Task 3</b></td></tr>
+       <tr><td align="left">Lay table</td></tr>
+       <tr><td align="left"><font color="red">todo</font></td></tr>
+     </table>>];
+  
+    task_eat[ label=<
+     <table border="1" cellborder="0" cellspacing="1">
+       <tr><td align="left"><b>Task 6</b></td></tr>
+       <tr><td align="left">Eat</td></tr>
+       <tr><td align="left"><font color="red">todo</font></td></tr>
+     </table>>];
+  
+  
+    task_menu        -> task_ingredients;
+    task_ingredients -> task_cook;
+    task_invitation  -> task_cook;
+    task_table       -> task_eat;
+    task_cook        -> task_eat;
+  
+  }`
 
 
 class Memory {
@@ -67,14 +148,23 @@ class Memory {
 
         this.ary.push(simple)
         this.ary.push(complex)
+        this.ary.push(boxey)
+        this.ary.push(thing)
+
     }
 
     getNext() {
-        const x = this.ary[this.index];
         this.index++
-        if (this.index >= (this.ary.length)) {
+        if (this.index > (this.ary.length - 1)) {
             this.index = 0;
         }
+        try {
+            document.getElementById("showIndex").innerHTML = this.index;
+        } catch (boom) {
+            console.log(boom)
+        }
+        console.log(this.index + "  !! " + Math.random())
+        const x = this.ary[this.index];
         return x
     }
 }
