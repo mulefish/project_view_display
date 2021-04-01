@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import * as d3 from "d3";
 import { Dot } from './logic.js'
 
@@ -72,31 +72,75 @@ const ForceDirectedGraph = ({
 }) => {
     const width = window.innerWidth
     const height = window.innerHeight * 0.7
+    const [datasets, setDatasets] = useState([])
+    const [points, setPoints] = useState([])
     function showValue() {
         getABCFunc()
     }
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        let points = []
-        points.push({ "id": "mydear", "x": 120, "y": 120 })
-        points.push({ "id": "helgoatlo", "x": 100, "y": 10 })
+    //     let points = []
+    //     points.push({ "id": "mydear", "x": 120, "y": 120 })
+    //     points.push({ "id": "helgoatlo", "x": 100, "y": 10 })
 
-        points.forEach((info) => {
-            let p = new Dot(info.id, info.x, info.y)
-            pieces[info.id] = p
-            addPieceIntoDom(p)
-        })
-    })
+    //     points.forEach((info) => {
+    //         let p = new Dot(info.id, info.x, info.y)
+    //         pieces[info.id] = p
+    //         addPieceIntoDom(p)
+    //     })
+    // })
     const style_obj = {
         marginTop: 0, width: width + "px", height: height + "px", background: "#fff"
     }
+
+    useEffect(() => {
+        fetch("data.json")
+            .then(response => response.json())
+            .then(data => {
+                setDatasets(data)
+            });
+    }, []);
+
+    const chooseDataset = (e) => {
+        const choice = e.target.value;
+        if (choice === "select") {
+            // skip it 
+        } else {
+            fetch(choice)
+                .then(response => response.json())
+                .then(data => {
+                    let ary = []
+                    for (let k in data) {
+                        let obj = data[k]
+                        obj.id = obj.nickname
+                        obj.x = Math.random() * width
+                        obj.y = Math.random() * height
+                        const p = new Dot(obj.id, obj.x, obj.y)
+                        pieces[obj.id] = p
+                        addPieceIntoDom(p)
+                    }
+                })
+        }
+    }
+
+    let options = []
+    options.push(<option>select</option>)
+    datasets.forEach((ds) => {
+        options.push(<option>{ds}</option>)
+    })
+
+
     return (
         <>
             <svg id="graph"
                 style={style_obj}
             />
             <hr></hr>
+            <select onChange={(e) => chooseDataset(e)}>
+                {options}
+            </select>
+            <br></br>
             <button onClick={showValue}>showValue</button>
             { JSON.stringify(abcValue, null, 10)}
         </>
