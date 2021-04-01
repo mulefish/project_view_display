@@ -72,6 +72,9 @@ const ForceDirectedGraph = ({
 }) => {
     const width = window.innerWidth
     const height = window.innerHeight * 0.7
+    function showValue() {
+        getABCFunc()
+    }
 
     useEffect(() => {
 
@@ -94,6 +97,7 @@ const ForceDirectedGraph = ({
                 style={style_obj}
             />
             <hr></hr>
+            <button onClick={showValue}>showValue</button>
             { JSON.stringify(abcValue, null, 10)}
         </>
 
