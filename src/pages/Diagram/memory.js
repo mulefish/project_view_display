@@ -139,36 +139,35 @@ let thing = `digraph D {
   
   }`
 
+const working1 = `digraph {
+    }`
+
+const working2 = `digraph {
+    }`
 
 class Memory {
 
-    constructor() {
-        this.ary = []
-        this.index = 0
+  constructor() {
+    this.ary = []
 
-        this.ary.push(simple)
-        this.ary.push(complex)
-        this.ary.push(boxey)
-        this.ary.push(thing)
+    this.ary.push(simple)
+    this.ary.push(complex)
+    this.ary.push(boxey)
+    this.ary.push(thing)
+    this.ary.push(working1) // working 
+    this.ary.push(working2) // working 
 
-    }
-
-    getNext() {
-        this.index++
-        if (this.index > (this.ary.length - 1)) {
-            this.index = 0;
-        }
-        try {
-            document.getElementById("showIndex").innerHTML = this.index;
-        } catch (boom) {
-            console.log(boom)
-        }
-        console.log(this.index + "  !! " + Math.random())
-        const x = this.ary[this.index];
-        return x
-    }
+  }
+  getDrawing(id) {
+    const x = this.ary[id];
+    return x
+  }
+  setDrawing(id, details) {
+    this.ary[id] = details;
+    //    console.log(id + "\n" + details + "\nand \n" + this.ary[id])
+  }
 }
 
 export {
-    Memory
+  Memory
 }

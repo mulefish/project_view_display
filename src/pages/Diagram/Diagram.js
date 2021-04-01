@@ -6,60 +6,49 @@ import './style.css';
 
 function Diagram() {
     const mem = new Memory()
-    let [graf, setGraf] = useState(mem.getNext())
-    function nextGraph() {
-        setGraf(mem.getNext())
+    const [graf, setGraf] = useState(mem.getDrawing(5))
+    const [held, setHeld] = useState(mem.getDrawing(5))
+    function getDrawing(id) {
+        const x = mem.getDrawing(id);
+        document.getElementById("input").value = x;
+        setGraf(x);
     }
-
-    function loadFromText() {
+    function setDrawing(id) {
         const x = document.getElementById("input").value;
-        setGraf(x)
+        mem.setDrawing(id, x)
+        setGraf(mem.getDrawing(id));
     }
-
-    let working = `
-    digraph D {
-    
-        subgraph cluster_p {
-          label = "Parent";
-      
-          subgraph cluster_c1 {
-            label = "Child one";
-            a;
-      
-            subgraph cluster_gc_1 {
-              label = "Grand-Child one";
-               b;
-            }
-            subgraph cluster_gc_2 {
-              label = "Grand-Child two";
-                c;
-                d;
-            }
-      
-          }
-      
-          subgraph cluster_c2 {
-            label = "Child two";
-            e;
-          }
-        }
-      }
-    `
-    function loadFromMemoryText() {
-        document.getElementById("input").value = working
+    function holding() {
+        setHeld(document.getElementById("input").value);
+        console.log("SET " + held)
     }
-    function saveToMemory() {
-        working = document.getElementById("input").value
+    function revert() {
+        document.getElementById("input").value = held;
+        console.log("GET " + held)
     }
-
-
 
     return (
         <>
-            <button onClick={nextGraph}>nextGraphs</button>
-            <button onClick={loadFromText}>load</button >
-            <button onClick={loadFromMemoryText}>loadFromMemoryText</button >
-            <button onClick={saveToMemory}>saveToMemory</button >
+            Display
+            <button onClick={() => getDrawing(0)}>0</button>
+            <button onClick={() => getDrawing(1)}>1</button>
+            <button onClick={() => getDrawing(2)}>2</button>
+            <button onClick={() => getDrawing(3)}>3</button>
+            <button onClick={() => getDrawing(4)}>4</button>
+            <button onClick={() => getDrawing(5)}>5</button>
+
+            Save
+            <button onClick={() => setDrawing(0)}>0</button>
+            <button onClick={() => setDrawing(1)}>1</button>
+            <button onClick={() => setDrawing(2)}>2</button>
+            <button onClick={() => setDrawing(3)}>3</button>
+            <button onClick={() => setDrawing(4)}>4</button>
+            <button onClick={() => setDrawing(5)}>5</button>
+
+            Temp
+            <button onClick={holding}>Holding</button>
+            <button onClick={revert}>Revert</button>
+
             <hr></hr>
             <table border='1'>
                 <tbody>
@@ -72,7 +61,7 @@ function Diagram() {
                             />
                         </td>
                         <td valign='top'>
-                            <textarea rows='100' cols='70' id='input' text=""></textarea>
+                            <textarea rows='100' cols='80' id='input' text></textarea>
                         </td>
                     </tr>
                 </tbody>
