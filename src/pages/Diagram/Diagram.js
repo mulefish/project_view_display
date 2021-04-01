@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import { Graphviz } from 'graphviz-react';
 import { Memory } from './memory.js';

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import * as d3 from "d3";
-import Controls from './Controls.js'
 import { Dot } from './logic.js'
 
 let pieces = []
@@ -67,7 +66,10 @@ function dragended(d) {
     d3.select(this).attr("transform", "translate(" + (d.x = piece.x) + ',' + (d.y = piece.y) + ')');
     //d3.select(this).attr("transform", "translate(" + (d.x = piece.sx) + ',' + (d.y = piece.sx) + ')');
 }
-function ForceDirectedGraph() {
+const ForceDirectedGraph = ({
+    getABCFunc,
+    abcValue,
+}) => {
     const width = window.innerWidth
     const height = window.innerHeight * 0.7
 
@@ -91,7 +93,8 @@ function ForceDirectedGraph() {
             <svg id="graph"
                 style={style_obj}
             />
-            <Controls />
+            <hr></hr>
+            { JSON.stringify(abcValue, null, 10)}
         </>
 
     );

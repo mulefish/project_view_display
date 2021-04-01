@@ -1,9 +1,7 @@
 import TYPES from './types';
-// import { API_STATUS } from 'common/constants';
-//import { getListOfClassificationsViaRestfulEndpoint } from '../model/ClassifyDocumentController';
 
 const initialState = {
-    listOfClassificationsFromTheBackEnd: [],
+    abcValue: [],
 };
 
 const API_STATUS = {
@@ -12,25 +10,14 @@ const API_STATUS = {
 
 export default function classifyDocumentsReducer(state = initialState, action) {
     switch (action.type) {
-        case TYPES.ABC_STARTED:
-            console.log('%c STARTED', ' color:#ff00ff');
-
-            return {
-                ...state,
-                status: API_STATUS.GETTING,
-                error: null,
-            };
         case TYPES.ABC_SUCCESS:
-            console.log('%c SUCCESS' + JSON.stringify(action.abcDoc), ' color:#ff00ff');
             return {
                 ...state,
-                listOfClassificationsFromTheBackEnd: action.abcDoc,
+                abcValue: action.abcDoc,
                 status: null,
                 error: null,
             };
         case TYPES.ABC_ERROR:
-            console.log('%c Failbot! ' + action.error, ' color:#ff0000');
-
             return {
                 ...state,
                 error: action.error,

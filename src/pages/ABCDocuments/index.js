@@ -5,13 +5,13 @@ import { ABCDocumentsThunks } from './redux';
 
 
 const mapStateToProps = ({ abcDocuments }) => ({
-    listOfClassificationsFromTheBackEnd:
-        abcDocuments.listOfClassificationsFromTheBackEnd,
+    abcValue:
+        abcDocuments.abcValue,
 });
 
 const mapDispatchToProps = {
-    getListOfClassificationsViaRestfulEndpoint:
-        ABCDocumentsThunks.getListOfClassificationsViaRestfulEndpoint,
+    getABCFunc:
+        ABCDocumentsThunks.getABCFunc,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ABCDocuments);
