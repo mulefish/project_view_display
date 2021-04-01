@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
-// import { ABCDocumentsThunks, ABC DocumentsActions } from './redux';
+
 import ABCDocuments from './layout';
 import { ABCDocumentsThunks } from './redux';
 
 
-const mapStateToProps = ({ abcDocuments }) => ({
+const mapStateToProps = ({ abcReducer }) => ({
     abcValue:
-        abcDocuments.abcValue,
+        abcReducer.abcValue,
 });
 
 const mapDispatchToProps = {

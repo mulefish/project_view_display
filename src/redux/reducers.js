@@ -1,7 +1,7 @@
-import { ABCDocumentsReducer as abcDocuments } from '../pages/ABCDocuments/redux';
+import { ABCDocumentsReducer as abcReducer } from '../pages/ABCDocuments/redux';
 import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
-    abcDocuments
+    abcReducer
 });
 export default rootReducer;
