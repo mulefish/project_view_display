@@ -2,33 +2,6 @@ import React, { useEffect, useState } from "react";
 import * as d3 from "d3";
 import { Dot } from './logic.js'
 
-// const SecondPass = ({
-//     getABCFunc,
-//     abcValue,
-// }) => {
-//     return (
-//         <>
-//             Hekkiadjfa
-//         </>
-//     );
-// };
-// export default SecondPass
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let pieces = []
 
 let showLetter = true
@@ -96,6 +69,9 @@ function dragended(d) {
 const SecondPass = ({
     getABCFunc,
     abcValue,
+    kittyValue,
+    setKittyCat
+
 }) => {
     const width = window.innerWidth
     const height = window.innerHeight * 0.7
@@ -128,6 +104,16 @@ const SecondPass = ({
                 setDatasets(data)
             });
     }, []);
+
+
+    function setKittyCatValue() {
+        let tmp = [
+            'a',
+            'b',
+            Math.random()
+        ]
+        setKittyCat(tmp)
+    }
 
     const chooseDataset = (e) => {
         const choice = e.target.value;
@@ -172,6 +158,13 @@ const SecondPass = ({
             <br></br>
             <button onClick={showValue}>showValue</button>
             { JSON.stringify(abcValue, null, 10)}
+
+            <br></br>
+        kittyValue
+            <button onClick={setKittyCatValue}>setKittyCatValue</button>
+            { JSON.stringify(kittyValue, null, 10)}
+
+
         </>
 
     );

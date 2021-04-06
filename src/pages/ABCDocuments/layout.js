@@ -1,15 +1,42 @@
-//import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { PropTypes } from 'prop-types';
 
 const SearchMechanism = ({
     getABCFunc,
     abcValue,
+    kittyValue,
+    setKittyCat
 }) => {
+
+
+
 
     function showValue() {
         getABCFunc()
     }
 
+    function setKittyCatValue() {
+        let tmp = [
+            'a',
+            'b',
+            Math.random()
+        ]
+        setKittyCat(tmp)
+    }
+    /*
+    useEffect(() => {
+        (async () => {
+            let tmp = [
+                'a',
+                'b',
+                Math.random()
+            ]
+            alert("ABCDocument! " + tmp)
+            await
+                setKittyCat(tmp)
+        })();
+    }, [getABCFunc]);
+    */
 
     // useEffect(() => {
     //     (async () => {
@@ -25,6 +52,11 @@ const SearchMechanism = ({
         <button onClick={showValue}>showValue</button>
 
         { JSON.stringify(abcValue, null, 10)}
+        <br></br>
+        kittyValue
+        <button onClick={setKittyCatValue}>setKittyCatValue</button>
+        { JSON.stringify(kittyValue, null, 10)}
+
 
     </>;
 };

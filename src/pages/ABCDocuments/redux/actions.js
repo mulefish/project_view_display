@@ -6,6 +6,12 @@ function ABC_SUCCESS(abcDoc) {
         abcDoc
     }
 }
+function KITTY_SUCCESS(kittycats) {
+    return {
+        type: TYPES.KITTY_SUCCESS,
+        kittycats
+    }
+}
 
 // const abc_Failbot = () => ({
 //     type: TYPES.ABC_ERROR,
@@ -14,5 +20,6 @@ function ABC_SUCCESS(abcDoc) {
 
 export default {
     ABC_SUCCESS,
+    KITTY_SUCCESS
     // abc_Failbot,
 };

@@ -23,6 +23,14 @@ export default function classifyDocumentsReducer(state = initialState, action) {
                 error: action.error,
                 status: null,
             };
+        case TYPES.KITTY_SUCCESS:
+            return {
+                ...state,
+                kittyValue: action.kittycats,
+                error: null,
+                status: null,
+            };
+
         default:
             return state;
     }
