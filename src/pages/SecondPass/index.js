@@ -14,4 +14,3 @@ const mapDispatchToProps = {
 
 export default connect(mapStateToProps, mapDispatchToProps)(SecondPass)
 
-// https://www.npmjs.com/package/d3-graphviz

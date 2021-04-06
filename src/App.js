@@ -1,15 +1,10 @@
-//import Viewport from "./pages/ForceDirectedGraph/ForceDirectedGraph.js";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './pages/Home/index.js'
-// import ForceDirectedGraph from './pages/ForceDirectedGraph/ForceDirectedGraph.js'
 import ForceDirectedGraph from './pages/ForceDirectedGraph/index.js'
+import SecondPass from './pages/SecondPass/index.js'
 import Diagram from './pages/Diagram/Diagram.js'
 import ABCDocuments from './pages/ABCDocuments/index.js'
 const App = () => {
-
-  // routes.map((route, index) => {
-  //   console.table(route.path, route.component, route.exact, index)
-  // })
 
   return (
     <>
@@ -29,6 +24,9 @@ const App = () => {
           </Route>
           <Route exact path="/ABCDocuments">
             <ABCDocuments />
+          </Route>
+          <Route exact path="/SecondPass">
+            <SecondPass />
           </Route>
 
 

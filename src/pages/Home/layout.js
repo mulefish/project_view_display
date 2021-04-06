@@ -18,6 +18,11 @@ const Home = () => {
     function gotoABCDocument() {
         history.push('/ABCDocuments')
     }
+
+    function gotoSecondPass() {
+        history.push('/SecondPass')
+    }
+
     const style_big = {
         margin: 10, fontSize: '200px', color: "#000"
     }
@@ -77,6 +82,22 @@ const Home = () => {
 
                                 </button>
                             </td>
+
+
+                            <td valign='top'>
+                                <button onClick={gotoSecondPass}>
+                                    <div style={style_big2}>
+                                        🐙
+                                    </div>
+                                    <hr></hr>
+                                    <div style={style_mid}>
+                                        SecondPass
+                    </div>
+
+
+                                </button>
+                            </td>
+
 
 
                         </tr>
