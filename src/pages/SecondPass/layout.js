@@ -160,7 +160,7 @@ const SecondPass = ({
             { JSON.stringify(abcValue, null, 10)}
 
             <br></br>
-        kittyValue
+            kittyValue
             <button onClick={setKittyCatValue}>setKittyCatValue</button>
             { JSON.stringify(kittyValue, null, 10)}
 
