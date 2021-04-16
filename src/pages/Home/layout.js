@@ -23,11 +23,15 @@ const Home = () => {
         history.push('/SecondPass')
     }
 
+    function gotoFauxForce() {
+        history.push('/FauxForce')
+    }
+
     const style_big = {
-        margin: 10, fontSize: '200px', color: "#000"
+        margin: 10, fontSize: '180px', color: "#000"
     }
     const style_big2 = {
-        margin: 10, fontSize: '270px', color: "#000"
+        margin: 10, fontSize: '180px', color: "#000"
     }
 
     const style_mid = {
@@ -42,6 +46,18 @@ const Home = () => {
                         <tr>
                             <td valign='top'>
 
+                                <button onClick={gotoFauxForce}>
+                                    <div style={style_big}>
+                                        🤖
+                                    </div>
+                                    <hr></hr>
+                                    <div style={style_mid}>
+                                        FauxForce
+                                    </div>
+                                </button>
+                            </td>
+
+                            <td valign='top'>
                                 <button onClick={gotoForceDirectedGraph}>
                                     <div style={style_big}>
                                         ᛤ
@@ -50,7 +66,7 @@ const Home = () => {
                                     <hr></hr>
                                     <div style={style_mid}>
                                         ForceDirectedGraph
-                    </div>
+                                    </div>
                                 </button>
                             </td>
                             <td>&nbsp;</td>
