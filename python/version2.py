@@ -14,9 +14,9 @@ class Node:
         self.dir = dir
         self.ary = dir.split("|")
 
-    # def show(self):
-    #     r = "{}|{}".format(self.l, self.dir)
-    #     return r
+    def show(self):
+        r = "{}|{}".format(self.l, self.dir)
+        return r
 
 
 class Parent:
@@ -25,7 +25,8 @@ class Parent:
         self.children = []
 
     def addKid(self, kid):
-        self.children.append(kid)
+        if kid not in self.children:
+            self.children.append(kid)
 
     def show(self):
         return {
@@ -41,38 +42,41 @@ def getMaxDepth(ary_of_objs):
     return most
 
 
-def readFS_makeDotGraph():
+def step1_gatherData():
     step1 = []
     i = 0
     for root, dirs, files in os.walk(rootPath):
         root = root.replace(os.sep, "|")
         l = getLetterFromNumber(i)
+        i += 1
         for filename in fnmatch.filter(files, pattern):
             x = "{}|{}".format(root, filename)
-            # print("{}     {}".format(family, x))
             step1.append(Node(l, x))
-    deepest = getMaxDepth(step1)
+    return step1
 
+
+def step2_makeGenerations(deepest, results_from_step1):
     generations = []
     for j in range(1, deepest):
         map = {}
-        for n in step1:
+        for n in results_from_step1:
             if j < len(n.ary):
                 a = n.ary[j - 1]
                 b = n.ary[j]
-                # print(a, b)
                 if a not in ignore:
                     if a not in map:
                         p = Parent(a)
                         map[a] = p
                     map[a].addKid(b)
-        # print("...")
         generations.append(map)
-    for map in generations:
-        for k in map:
-            print("|{}|".format(k))
-            # print(map[k].show())
+    return generations
 
 
 if __name__ == "__main__":
-    readFS_makeDotGraph()
+    step1 = step1_gatherData()
+    deepest = getMaxDepth(step1)
+    generations = step2_makeGenerations(deepest, step1)
+    for g in generations:
+        for k in g:
+            p = g[k]
+            print(p.show())
