@@ -12,7 +12,7 @@ G = nx.DiGraph()
 # )
 G.add_edges_from(
     [('src', 'index.js'), ('src', 'App.test.js'), ('src', 'routes.js'), ('src',
-                                                                         'setupTests.js'), ('src', 'App.js'), ('src', 'pages'), ('src', 'redux')]
+                                                                         'setupTests.js'), ('src', 'App.js'), ('src', 'pages'), ('src', 'redux'), ('redux', 'dinosaur'), ('redux', 'kittycat')]
 )
 
 val_map = {}
