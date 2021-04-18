@@ -46,11 +46,14 @@ def step1_gatherData():
     step1 = []
     i = 0
     for root, dirs, files in os.walk(rootPath):
-        root = root.replace(os.sep, "|")
+        # root = root.replace(os.sep, "|")
         l = getLetterFromNumber(i)
         i += 1
         for filename in fnmatch.filter(files, pattern):
             x = "{}|{}".format(root, filename)
+            x = x.replace(os.sep, "|")
+            x = x.replace("||", "|")
+            # print(x)
             step1.append(Node(l, x))
     return step1
 
@@ -72,11 +75,34 @@ def step2_makeGenerations(deepest, results_from_step1):
     return generations
 
 
+def step3_emit_raw_graph(generations):
+    # for g in generations:
+    for i in range(len(generations)):
+        g = generations[i]
+        for nodeFrom in g:
+            # print(nodeFrom)
+            parent = g[nodeFrom]
+            # nodeFrom = parents
+            collect = []
+            for nodeTo in parent.children:
+                collect.append("('{}','{}')".format(nodeFrom, nodeTo))
+            print(collect)
+            # print("{} {}".format(i, parent.base))
+            # print("{}".format(parent.base))
+            # for kid in parent.children:
+            #     print("\t" + kid)
+
+
 if __name__ == "__main__":
     step1 = step1_gatherData()
     deepest = getMaxDepth(step1)
     generations = step2_makeGenerations(deepest, step1)
-    for g in generations:
-        for k in g:
-            p = g[k]
-            print(p.show())
+    step3_emit_raw_graph(generations)
+
+    # parent = generations[1]["src"]
+    # print(parent.show())
+    # print(parent)
+    # for g in generations:
+    #     for k in g:
+    #         p = g[k]
+    #         print(p.show())
