@@ -7,10 +7,24 @@ import matplotlib.pyplot as plt
 
 G = nx.DiGraph()
 
+# G.add_edges_from(
+#     [('src', 'index.js'), ('src', 'App.test.js'), ('src', 'routes.js'), ('src', 'setupTests.js'), ('src', 'App.js'), ('src', 'pages'), ('src', 'redux'), ('redux', 'index.js'), ('redux', 'reducers.js'), ('pages', 'Home'), ('pages', 'Diagram'), ('pages', 'FauxForce'), ('pages', 'ABCDocuments'), ('pages', 'SecondPass'), ('pages', 'ForceDirectedGraph'), ('ABCDocuments', 'layout.js'), ('ABCDocuments', 'index.js'), ('ABCDocuments', 'redux'), ('SecondPass', 'layout.js'), ('SecondPass', 'logic.js'), ('SecondPass', 'Controls.js'), ('SecondPass', 'memory.js'),
+#      ('SecondPass', 'index.js'), ('Diagram', 'memory.js'), ('Diagram', 'Diagram.js'), ('FauxForce', 'layout.js'), ('FauxForce', 'logic.js'), ('FauxForce', 'Controls.js'), ('FauxForce', 'index.js'), ('FauxForce', 'ReadJson.js'), ('ForceDirectedGraph', 'layout.js'), ('ForceDirectedGraph', 'logic.js'), ('ForceDirectedGraph', 'Controls.js'), ('ForceDirectedGraph', 'index.js'), ('Home', 'layout.js'), ('Home', 'index.js'), ('redux', 'types.js'), ('redux', 'actions.js'), ('redux', 'index.js'), ('redux', 'reducers.js'), ('redux', 'thunks.js'), ]
+# )
+
 G.add_edges_from(
-    [('src', 'index.js'), ('src', 'App.test.js'), ('src', 'routes.js'), ('src', 'setupTests.js'), ('src', 'App.js'), ('src', 'pages'), ('src', 'redux'), ('redux', 'index.js'), ('redux', 'reducers.js'), ('pages', 'Home'), ('pages', 'Diagram'), ('pages', 'FauxForce'), ('pages', 'ABCDocuments'), ('pages', 'SecondPass'), ('pages', 'ForceDirectedGraph'), ('ABCDocuments', 'layout.js'), ('ABCDocuments', 'index.js'), ('ABCDocuments', 'redux'), ('SecondPass', 'layout.js'), ('SecondPass', 'logic.js'), ('SecondPass', 'Controls.js'), ('SecondPass', 'memory.js'),
-     ('SecondPass', 'index.js'), ('Diagram', 'memory.js'), ('Diagram', 'Diagram.js'), ('FauxForce', 'layout.js'), ('FauxForce', 'logic.js'), ('FauxForce', 'Controls.js'), ('FauxForce', 'index.js'), ('FauxForce', 'ReadJson.js'), ('ForceDirectedGraph', 'layout.js'), ('ForceDirectedGraph', 'logic.js'), ('ForceDirectedGraph', 'Controls.js'), ('ForceDirectedGraph', 'index.js'), ('Home', 'layout.js'), ('Home', 'index.js'), ('redux', 'types.js'), ('redux', 'actions.js'), ('redux', 'index.js'), ('redux', 'reducers.js'), ('redux', 'thunks.js'), ]
+    [('src', 'index.js'),
+     ('src', 'App.test.js'),
+     ('src', 'routes.js'),
+     ('src', 'setupTests.js'),
+     ('src', 'App.js'),
+     ('src', 'pages'),
+     ('src', 'redux'),
+     ('redux', 'dinosaur'),
+     ('redux', 'kittycat')
+     ]
 )
+
 # G.add_edges_from(
 #     [('src', 'index.js'), ('src', 'App.test.js'), ('src', 'routes.js'), ('src',
 #                                                                          'setupTests.js'), ('src', 'App.js'), ('src', 'pages'), ('src', 'redux'), ('redux', 'dinosaur'), ('redux', 'kittycat')]
@@ -25,7 +39,7 @@ val_map = {}
 values = [val_map.get(node, 0.25) for node in G.nodes()]
 
 # Specify the edges you want here
-red_edges = [('A', 'C'), ('E', 'C')]
+red_edges = []
 edge_colours = ['black' if not edge in red_edges else 'red'
                 for edge in G.edges()]
 black_edges = [edge for edge in G.edges() if edge not in red_edges]
