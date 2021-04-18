@@ -6,14 +6,16 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 G = nx.DiGraph()
-# G.add_edges_from(
-#     [('A', 'B'), ('A', 'C'), ('D', 'B'), ('E', 'C'), ('E', 'F'),
-#      ('B', 'H'), ('B', 'G'), ('B', 'F'), ('C', 'G')]
-# )
+
 G.add_edges_from(
-    [('src', 'index.js'), ('src', 'App.test.js'), ('src', 'routes.js'), ('src',
-                                                                         'setupTests.js'), ('src', 'App.js'), ('src', 'pages'), ('src', 'redux'), ('redux', 'dinosaur'), ('redux', 'kittycat')]
+    [('src', 'index.js'), ('src', 'App.test.js'), ('src', 'routes.js'), ('src', 'setupTests.js'), ('src', 'App.js'), ('src', 'pages'), ('src', 'redux'), ('redux', 'index.js'), ('redux', 'reducers.js'), ('pages', 'Home'), ('pages', 'Diagram'), ('pages', 'FauxForce'), ('pages', 'ABCDocuments'), ('pages', 'SecondPass'), ('pages', 'ForceDirectedGraph'), ('ABCDocuments', 'layout.js'), ('ABCDocuments', 'index.js'), ('ABCDocuments', 'redux'), ('SecondPass', 'layout.js'), ('SecondPass', 'logic.js'), ('SecondPass', 'Controls.js'), ('SecondPass', 'memory.js'),
+     ('SecondPass', 'index.js'), ('Diagram', 'memory.js'), ('Diagram', 'Diagram.js'), ('FauxForce', 'layout.js'), ('FauxForce', 'logic.js'), ('FauxForce', 'Controls.js'), ('FauxForce', 'index.js'), ('FauxForce', 'ReadJson.js'), ('ForceDirectedGraph', 'layout.js'), ('ForceDirectedGraph', 'logic.js'), ('ForceDirectedGraph', 'Controls.js'), ('ForceDirectedGraph', 'index.js'), ('Home', 'layout.js'), ('Home', 'index.js'), ('redux', 'types.js'), ('redux', 'actions.js'), ('redux', 'index.js'), ('redux', 'reducers.js'), ('redux', 'thunks.js'), ]
 )
+# G.add_edges_from(
+#     [('src', 'index.js'), ('src', 'App.test.js'), ('src', 'routes.js'), ('src',
+#                                                                          'setupTests.js'), ('src', 'App.js'), ('src', 'pages'), ('src', 'redux'), ('redux', 'dinosaur'), ('redux', 'kittycat')]
+# )
+
 
 val_map = {}
 # val_map = {'A': 1.0,

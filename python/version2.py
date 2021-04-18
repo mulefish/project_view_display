@@ -76,21 +76,23 @@ def step2_makeGenerations(deepest, results_from_step1):
 
 
 def step3_emit_raw_graph(generations):
+    collect = "["
     # for g in generations:
     for i in range(len(generations)):
         g = generations[i]
+
         for nodeFrom in g:
             # print(nodeFrom)
             parent = g[nodeFrom]
             # nodeFrom = parents
-            collect = []
             for nodeTo in parent.children:
-                collect.append("('{}','{}')".format(nodeFrom, nodeTo))
-            print(collect)
-            # print("{} {}".format(i, parent.base))
-            # print("{}".format(parent.base))
-            # for kid in parent.children:
-            #     print("\t" + kid)
+                collect += "('{}','{}'),".format(nodeFrom, nodeTo)
+    collect += "]"
+    print(collect)
+    # print("{} {}".format(i, parent.base))
+    # print("{}".format(parent.base))
+    # for kid in parent.children:
+    #     print("\t" + kid)
 
 
 if __name__ == "__main__":
