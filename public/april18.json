@@ -1,0 +1,248 @@
+[
+    {
+        "to": "index.js",
+        "from": "src",
+        "id": "A",
+        "d": 2
+    },
+    {
+        "to": "App.test.js",
+        "from": "src",
+        "id": "A",
+        "d": 2
+    },
+    {
+        "to": "routes.js",
+        "from": "src",
+        "id": "A",
+        "d": 2
+    },
+    {
+        "to": "setupTests.js",
+        "from": "src",
+        "id": "A",
+        "d": 2
+    },
+    {
+        "to": "App.js",
+        "from": "src",
+        "id": "A",
+        "d": 2
+    },
+    {
+        "to": "pages",
+        "from": "src",
+        "id": "A",
+        "d": 2
+    },
+    {
+        "to": "redux",
+        "from": "src",
+        "id": "A",
+        "d": 2
+    },
+    {
+        "to": "index.js",
+        "from": "redux",
+        "id": "C",
+        "d": 3
+    },
+    {
+        "to": "reducers.js",
+        "from": "redux",
+        "id": "C",
+        "d": 3
+    },
+    {
+        "to": "Home",
+        "from": "pages",
+        "id": "B",
+        "d": 3
+    },
+    {
+        "to": "Diagram",
+        "from": "pages",
+        "id": "B",
+        "d": 3
+    },
+    {
+        "to": "FauxForce",
+        "from": "pages",
+        "id": "B",
+        "d": 3
+    },
+    {
+        "to": "ABCDocuments",
+        "from": "pages",
+        "id": "B",
+        "d": 3
+    },
+    {
+        "to": "SecondPass",
+        "from": "pages",
+        "id": "B",
+        "d": 3
+    },
+    {
+        "to": "ForceDirectedGraph",
+        "from": "pages",
+        "id": "B",
+        "d": 3
+    },
+    {
+        "to": "layout.js",
+        "from": "ABCDocuments",
+        "id": "G",
+        "d": 4
+    },
+    {
+        "to": "index.js",
+        "from": "ABCDocuments",
+        "id": "G",
+        "d": 4
+    },
+    {
+        "to": "redux",
+        "from": "ABCDocuments",
+        "id": "G",
+        "d": 4
+    },
+    {
+        "to": "layout.js",
+        "from": "SecondPass",
+        "id": "H",
+        "d": 4
+    },
+    {
+        "to": "logic.js",
+        "from": "SecondPass",
+        "id": "H",
+        "d": 4
+    },
+    {
+        "to": "Controls.js",
+        "from": "SecondPass",
+        "id": "H",
+        "d": 4
+    },
+    {
+        "to": "memory.js",
+        "from": "SecondPass",
+        "id": "H",
+        "d": 4
+    },
+    {
+        "to": "index.js",
+        "from": "SecondPass",
+        "id": "H",
+        "d": 4
+    },
+    {
+        "to": "memory.js",
+        "from": "Diagram",
+        "id": "E",
+        "d": 4
+    },
+    {
+        "to": "Diagram.js",
+        "from": "Diagram",
+        "id": "E",
+        "d": 4
+    },
+    {
+        "to": "layout.js",
+        "from": "FauxForce",
+        "id": "F",
+        "d": 4
+    },
+    {
+        "to": "logic.js",
+        "from": "FauxForce",
+        "id": "F",
+        "d": 4
+    },
+    {
+        "to": "Controls.js",
+        "from": "FauxForce",
+        "id": "F",
+        "d": 4
+    },
+    {
+        "to": "index.js",
+        "from": "FauxForce",
+        "id": "F",
+        "d": 4
+    },
+    {
+        "to": "ReadJson.js",
+        "from": "FauxForce",
+        "id": "F",
+        "d": 4
+    },
+    {
+        "to": "layout.js",
+        "from": "ForceDirectedGraph",
+        "id": "I",
+        "d": 4
+    },
+    {
+        "to": "logic.js",
+        "from": "ForceDirectedGraph",
+        "id": "I",
+        "d": 4
+    },
+    {
+        "to": "Controls.js",
+        "from": "ForceDirectedGraph",
+        "id": "I",
+        "d": 4
+    },
+    {
+        "to": "index.js",
+        "from": "ForceDirectedGraph",
+        "id": "I",
+        "d": 4
+    },
+    {
+        "to": "layout.js",
+        "from": "Home",
+        "id": "D",
+        "d": 4
+    },
+    {
+        "to": "index.js",
+        "from": "Home",
+        "id": "D",
+        "d": 4
+    },
+    {
+        "to": "types.js",
+        "from": "redux",
+        "id": "G",
+        "d": 5
+    },
+    {
+        "to": "actions.js",
+        "from": "redux",
+        "id": "G",
+        "d": 5
+    },
+    {
+        "to": "index.js",
+        "from": "redux",
+        "id": "G",
+        "d": 5
+    },
+    {
+        "to": "reducers.js",
+        "from": "redux",
+        "id": "G",
+        "d": 5
+    },
+    {
+        "to": "thunks.js",
+        "from": "redux",
+        "id": "G",
+        "d": 5
+    }
+]

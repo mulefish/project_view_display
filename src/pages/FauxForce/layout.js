@@ -78,18 +78,6 @@ const FauxForce = ({
         getABCFunc()
     }
 
-    // useEffect(() => {
-
-    //     let points = []
-    //     points.push({ "id": "mydear", "x": 120, "y": 120 })
-    //     points.push({ "id": "helgoatlo", "x": 100, "y": 10 })
-
-    //     points.forEach((info) => {
-    //         let p = new Dot(info.id, info.x, info.y)
-    //         pieces[info.id] = p
-    //         addPieceIntoDom(p)
-    //     })
-    // })
     const style_obj = {
         marginTop: 0, width: width + "px", height: height + "px", background: "#fff"
     }
@@ -110,16 +98,17 @@ const FauxForce = ({
             fetch(choice)
                 .then(response => response.json())
                 .then(data => {
-                    let ary = []
-                    for (let k in data) {
-                        let obj = data[k]
-                        obj.id = obj.nickname
-                        obj.x = Math.random() * width
-                        obj.y = Math.random() * height
-                        const p = new Dot(obj.id, obj.x, obj.y)
-                        pieces[obj.id] = p
-                        addPieceIntoDom(p)
-                    }
+                    console.log(data)
+                    // let ary = []
+                    // for (let k in data) {
+                    //     let obj = data[k]
+                    //     obj.id = obj.nickname
+                    //     obj.x = Math.random() * width
+                    //     obj.y = Math.random() * height
+                    //     const p = new Dot(obj.id, obj.x, obj.y)
+                    //     pieces[obj.id] = p
+                    //     addPieceIntoDom(p)
+                    // }
                 })
         }
     }
@@ -134,7 +123,7 @@ const FauxForce = ({
     return (
         <>
 
-            kddkdkkdkdkd
+
             <svg id="graph"
                 style={style_obj}
             />

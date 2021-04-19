@@ -2,7 +2,7 @@ import fnmatch
 import os
 import json
 from letters import getLetterFromNumber
-
+import math
 pattern = "*.js"
 rootPath = "../src/"
 ignore = ["", ".."]
@@ -19,10 +19,19 @@ class Node:
         return r
 
 
+newParentCount = 0
+
+
 class Parent:
-    def __init__(self, base):
+
+    def __init__(self, base, depth):
+        global newParentCount
+
         self.base = base
         self.children = []
+        self.letter = getLetterFromNumber(newParentCount)
+        newParentCount += 1
+        self.depth = depth
 
     def addKid(self, kid):
         if kid not in self.children:
@@ -68,7 +77,7 @@ def step2_makeGenerations(deepest, results_from_step1):
                 b = n.ary[j]
                 if a not in ignore:
                     if a not in map:
-                        p = Parent(a)
+                        p = Parent(a, j)
                         map[a] = p
                     map[a].addKid(b)
         generations.append(map)
@@ -78,19 +87,33 @@ def step2_makeGenerations(deepest, results_from_step1):
 def step3_emit_raw_graph(generations):
     collections = []
     for i in range(len(generations)):
-        g = generations[i]
-
-        for nodeFrom in g:
-
-            parent = g[nodeFrom]
+        stack = generations[i]
+        for k in stack:
+            parent = stack[k]
             for nodeTo in parent.children:
                 fromTo = {
-                    'from': nodeFrom,
+                    'id': parent.letter,
+                    'd': parent.depth,
+                    'from': parent.base,
                     'to': nodeTo
                 }
                 collections.append(fromTo)
-                # print("--f:'{}',t:'{}'::,".format(nodeFrom, nodeTo))
-    print(collections)
+    # print(json.dumps(collections))
+
+
+def findNewPoint(x, y, angle, distance):
+    x = round(math.cos(angle * math.pi / 180) * distance + x)
+    y = round(math.sin(angle * math.pi / 180) * distance + y)
+    xy = {
+        "x": x,
+        "y": y
+    }
+    return xy
+
+
+def findOpposetAngle(angle):
+    oppositeAngle = (angle + 180) % 360
+    return oppositeAngle
 
 
 if __name__ == "__main__":
@@ -98,11 +121,3 @@ if __name__ == "__main__":
     deepest = getMaxDepth(step1)
     generations = step2_makeGenerations(deepest, step1)
     step3_emit_raw_graph(generations)
-
-    # parent = generations[1]["src"]
-    # print(parent.show())
-    # print(parent)
-    # for g in generations:
-    #     for k in g:
-    #         p = g[k]
-    #         print(p.show())
