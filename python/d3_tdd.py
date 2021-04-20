@@ -1,4 +1,4 @@
-from d3_reportmaker import PathToLeaf, Parent, getMaxDepth, step2_makeGenerations, findNewPoint, findOpposetAngle
+from y import PathToLeaf, Parent, getMaxDepth, step2_makeGenerations, findNewPoint, findOpposetAngle
 from letters import getLetterFromNumber
 import unittest
 
