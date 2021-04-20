@@ -8,13 +8,15 @@ rootPath = "../src/"
 
 
 class Node:
-    def __init__(self, name):
+    def __init__(self, name, depth):
         self.name = name
         self.kids = []
+        self.depth = depth
 
     def addChild(self, kid):
         if kid not in self.kids:
-            self.kids.append(kid)
+            k = {"name": kid}
+            self.kids.append(k)
 
     def show(self):
         return {
@@ -26,12 +28,12 @@ NILL = "NILL"
 ignore = [NILL]
 
 
-def getUniques(ary):
+def getUniques(ary, depth):
     nodes = {}
     for item in ary:
         if item not in nodes:
             if item != NILL:
-                nodes[item] = Node(item)
+                nodes[item] = Node(item, depth)
     return nodes
 
 
@@ -59,11 +61,11 @@ def step1_gatherData():
     rotated = zip(*reversed(found))
     generations = []
     # assumption: the 0th 'generation' has only one member called 'src'
-
+    seen = {}
     for i in range(1, len(rotated)):
         j = i - 1
         rowA = rotated[j]
-        parents = getUniques(rowA)
+        parents = getUniques(rowA, j)
 
         rowB = rotated[i]
 
@@ -71,20 +73,33 @@ def step1_gatherData():
             a = rowA[k]
             b = rowB[k]
             if b != NILL:
-                parents[a].addChild(b)
+
+                compoundname = "{}_{}_{}".format(j, a, b)
+                if compoundname not in seen:
+                    seen[compoundname] = ""
+                    parents[a].addChild(b)
         generations.append(parents)
         # for k in parents:
         #     n = parents[k]
         #     print("{}    {}".format(k, n.show()))
+
+    m = 0
+    for parents in generations:
+        for k in parents:
+            p = parents[k]
+            print("{}   {} {}".format(m, p.depth, p.name))
+            m += 1
+
     m = 0
     for i in range(len(generations)):
         parents = generations[i]
         for k in parents:
             n = parents[k]
             padding = pad(i)
-            for kid in n.kids:
-                print("{} {} {}    {}\t\t\t{}".format(
-                    m, padding, i, kid, n.name))
+            for kidmap in n.kids:
+                kidname = kidmap["name"]
+                print("{} {} {}    {}\t\t\t\t\t{}".format(
+                    m, padding, i, n.name, kidname))
                 m += 1
 
 
