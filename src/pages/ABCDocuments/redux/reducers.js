@@ -4,9 +4,9 @@ const initialState = {
     abcValue: [],
 };
 
-const API_STATUS = {
-    GETTING: "dummy value"
-}
+// const API_STATUS = {
+//     GETTING: "dummy value"
+// }
 
 export default function classifyDocumentsReducer(state = initialState, action) {
     switch (action.type) {

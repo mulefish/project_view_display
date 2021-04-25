@@ -11,8 +11,12 @@ const setKittyCat = (kittycats = []) => async (dispatch) => {
     dispatch(actions.KITTY_SUCCESS(kittycats));
 };
 
-
-export default {
+const exportedObject = {
     getABCFunc,
-    setKittyCat
+    setKittyCat,
 };
+// export default {
+//     getABCFunc,
+//     setKittyCat
+// };
+export default exportedObject;

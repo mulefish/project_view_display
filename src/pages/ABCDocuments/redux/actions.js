@@ -18,8 +18,16 @@ function KITTY_SUCCESS(kittycats) {
 //     error: 'It failed.',
 // });
 
-export default {
+// export default {
+//     ABC_SUCCESS,
+//     KITTY_SUCCESS
+// };
+const exportedObject = {
     ABC_SUCCESS,
-    KITTY_SUCCESS
-    // abc_Failbot,
+    KITTY_SUCCESS,
 };
+// export default {
+//     getABCFunc,
+//     setKittyCat
+// };
+export default exportedObject;

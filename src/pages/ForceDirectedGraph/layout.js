@@ -73,7 +73,7 @@ const ForceDirectedGraph = ({
     const width = window.innerWidth
     const height = window.innerHeight * 0.7
     const [datasets, setDatasets] = useState([])
-    const [points, setPoints] = useState([])
+    // const [points, setPoints] = useState([])
     function showValue() {
         getABCFunc()
     }
@@ -110,7 +110,7 @@ const ForceDirectedGraph = ({
             fetch(choice)
                 .then(response => response.json())
                 .then(data => {
-                    let ary = []
+                    // let ary = []
                     for (let k in data) {
                         let obj = data[k]
                         obj.id = obj.nickname

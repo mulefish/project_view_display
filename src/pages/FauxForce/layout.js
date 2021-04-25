@@ -1,140 +1,22 @@
-import React, { useEffect, useState } from "react";
-import * as d3 from "d3";
-import { Dot } from './logic.js'
+import React from "react";
+// import * as d3 from "d3";
+// import { Dot } from './logic.js'
 
-let pieces = []
-
-let showLetter = true
-let ids = []
-function addPieceIntoDom(piece) {
-
-    ids.push(piece.id)
-    let p = d3.select('#graph')
-        .append('svg:g')
-        .data([{
-            'id': piece.id,
-        }])
-        .attr('transform', 'translate(' + piece.x + ',' + piece.y + ')')
-        .attr('id', piece.id)
-        .call(d3.drag()
-            .on("start", dragstarted)
-            .on("drag", dragged)
-            .on("end", dragended));
-
-    // const background
-    p.append('svg:circle')
-        .attr('fill-opacity', 0.1)
-        .attr('stroke', '#000')
-        .attr('stroke-width', 2)
-        .attr('r', piece.r)
-    if (showLetter === true) {
-        //let foreground = 
-        p.append('svg:text')
-            .text(piece.id)
-            .attr('y', '.1em')
-            .style("font-size", piece.size + "px")
-            .attr('transform', 'translate(' + [10, 10] + ')')
-            .attr('text-anchor', 'middle')
-            .attr('font-weight', 700)
-            .attr('font-family', 'Helvetica')
-            .attr('fill', '#000000')
-            .attr('stroke', 'none')
-            .attr('pointer-events', 'none')
-    }
-}
-
-function dragstarted(d) {
-    let piece = pieces[d.id]
-    piece.sx = piece.x // d3.event.x // needed for snap back ability
-    piece.sy = piece.y // d3.event.y // needed for snap back ability
-}
-
-function dragged(d) {
-
-    const x = d3.event.x
-    const y = d3.event.y
-    d3.select(this).attr("transform", "translate(" + (d.x = x) + ',' + (d.y = y) + ')');
-}
-
-
-function dragended(d) {
-    d3.select(this).classed("active", false);
-    // console.log('%c For example...', 'background: #e0e0e0; color: #ff6633');
-    let piece = pieces[d.id]
-    piece.x = d3.event.x
-    piece.y = d3.event.y
-    d3.select(this).attr("transform", "translate(" + (d.x = piece.x) + ',' + (d.y = piece.y) + ')');
-    //d3.select(this).attr("transform", "translate(" + (d.x = piece.sx) + ',' + (d.y = piece.sx) + ')');
-}
 const FauxForce = ({
     getABCFunc,
     abcValue,
 }) => {
-    const width = window.innerWidth
-    const height = window.innerHeight * 0.7
-    const [datasets, setDatasets] = useState([])
-    const [points, setPoints] = useState([])
-    function showValue() {
-        getABCFunc()
-    }
-
-    const style_obj = {
-        marginTop: 0, width: width + "px", height: height + "px", background: "#fff"
-    }
-
-    useEffect(() => {
-        fetch("data.json")
-            .then(response => response.json())
-            .then(data => {
-                setDatasets(data)
-            });
-    }, []);
-
-    const chooseDataset = (e) => {
-        const choice = e.target.value;
-        if (choice === "select") {
-            // skip it 
-        } else {
-            fetch(choice)
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data)
-                    // let ary = []
-                    // for (let k in data) {
-                    //     let obj = data[k]
-                    //     obj.id = obj.nickname
-                    //     obj.x = Math.random() * width
-                    //     obj.y = Math.random() * height
-                    //     const p = new Dot(obj.id, obj.x, obj.y)
-                    //     pieces[obj.id] = p
-                    //     addPieceIntoDom(p)
-                    // }
-                })
-        }
-    }
-
-    let options = []
-    options.push(<option>select</option>)
-    datasets.forEach((ds) => {
-        options.push(<option>{ds}</option>)
-    })
-
-
+    const dimensions = {
+        width: window.innerWidth + 'px',
+        height: window.innerHeight * 0.61 + '500px'
+    };
     return (
         <>
+            <div className='wrapper' style={dimensions}>
+                <canvas id='background' width={dimensions.width} height={dimensions.height} style={dimensions}></canvas>
+                <canvas id='foreground' width={dimensions.width} height={dimensions.height} style={dimensions}></canvas>
+            </div>
 
-
-            <svg id="graph"
-                style={style_obj}
-            />
-            <hr></hr>
-            kdksdkdk
-            <select onChange={(e) => chooseDataset(e)}>
-                {options}
-            </select>
-            <br></br>
-            <button onClick={showValue}>showValue</button>
-            { JSON.stringify(abcValue, null, 10)}
         </>
 
     );
