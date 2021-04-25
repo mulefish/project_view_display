@@ -2,7 +2,6 @@ import fnmatch
 import json
 import math
 import os
-import random
 from letters import getLetterFromNumber
 
 pattern = "*.js"
@@ -14,7 +13,7 @@ ignore = [NILL]
 def pad(n):
     padding = ""
     for i in range(n):
-        padding += "\t"
+        padding += "---"
     return padding
 
 
@@ -38,13 +37,10 @@ class Node:
         self.name = name
         self.kids = []
         self.depth = depth
-        self.x = 0
-        self.y = 0
-        self.d = 100
 
     def addChild(self, kid):
         if kid not in self.kids:
-            k = {"name": kid, "x": 0, "y": 0, "d": 0}
+            k = {"name": kid}
             self.kids.append(k)
 
     def show(self):
@@ -115,49 +111,13 @@ def step3_makeFamilies(rotated):
     return generations
 
 
-def step4_place(generations):
-
-    m = 0
-    g = 1
-    generations[0]["src"].x = 100
-    generations[0]["src"].y = 100
-    generations[0]["src"].d = 100
-
-    # for parents in generations:
-    for i in range(1, len(generations)):
-        j = i - 1
-        a = generations[j]
-        b = generations[i]
-        for k in a:
-            padding = pad(i)
-            sweep = 50
-            d = a[k].d
-            print("{}   {}".format(padding, a[k].name))
-            for kids in a[k].kids:
-                name = kids["name"]
-
-                d += sweep
-                d = d % 360
-                xy = findNewPoint(a[k].x, a[k].y, d, 100)
-                b[name].x = xy["x"]
-                b[name].y = xy["y"]
-                b[name].d = d
-
-                # print("\t{}!!{} !!{}| {} {} {}".format(padding, name,
-                #                                        b[name].name, b[name].x, b[name].y, b[name].d))
-
-            m += 1
-
-
 def emit(generations):
 
     m = 0
     for parents in generations:
         for k in parents:
             p = parents[k]
-            padding = pad(m)
-
-            print("{} {}   {} {}".format(padding, m, p.depth, p.name))
+            print("{}   {} {}".format(m, p.depth, p.name))
             m += 1
 
     m = 0
@@ -168,9 +128,8 @@ def emit(generations):
             padding = pad(i)
             for kidmap in n.kids:
                 kidname = kidmap["name"]
-
-                # print("{} {} {}    {}\t\t{}| {} {} {}".format(
-                #     m, padding, i, n.name, kidname, n.x, n.y, n.d))
+                print("{} {} {}    {}\t\t\t\t\t{}".format(
+                    m, padding, i, n.name, kidname))
                 m += 1
 
 
@@ -178,5 +137,4 @@ if __name__ == "__main__":
     step1 = step1_gatherData()
     rotated = step2_rotateMatrix(step1)
     generations = step3_makeFamilies(rotated)
-    step4_place(generations)
     emit(generations)

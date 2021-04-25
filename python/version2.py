@@ -86,9 +86,10 @@ def step3_emit_raw_graph(generations):
             parent = g[nodeFrom]
             # nodeFrom = parents
             for nodeTo in parent.children:
-                collect += "('{}','{}'),".format(nodeFrom, nodeTo)
-    collect += "]"
-    print(collect)
+                # collect += "('{}','{}'),".format(nodeFrom, nodeTo)
+                print("('{}','{}'),".format(nodeFrom, nodeTo))
+    # collect += "]"
+    # print(collect)
     # print("{} {}".format(i, parent.base))
     # print("{}".format(parent.base))
     # for kid in parent.children:
