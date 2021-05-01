@@ -7,6 +7,8 @@ pattern = "*.js"
 rootPath = "../src/"
 ignore = ["", ".."]
 
+seen = {}
+
 
 def step1_gatherData():
     results = []
@@ -14,7 +16,12 @@ def step1_gatherData():
     j = 0
     for root, dirs, files in os.walk(rootPath):
         # root = root.replace(os.sep, "|")
-        familyName = "_{}".format(getLetterFromNumber(i))
+        root = root.replace(os.sep, "|")
+
+        parent = "_{}".format(getLetterFromNumber(i))
+        if parent not in seen:
+            ary = root.split("|")
+            seen[parent] = root
         i += 1
         for filename in fnmatch.filter(files, pattern):
             x = "{}|{}".format(root, filename)
@@ -23,7 +30,7 @@ def step1_gatherData():
             # print("{} {}".format(l, x ))
             obj = {}
             obj["path"] = x
-            obj["familyId"] = familyName
+            obj["parent"] = parent
             obj["id"] = getLetterFromNumber(j)
             obj["angle"] = 0
             obj["x"] = 0
@@ -32,9 +39,12 @@ def step1_gatherData():
             obj["sy"] = 0
             j += 1
             results.append(obj)
-        for x in results:
-            print(x)
-        # print(results)
+
+    for x in results:
+        print("{},".format(x))
+    # print(results)
+    # for s in seen:
+    #     print("{}    {} ".format(s, seen[s]))
 
 
 if __name__ == "__main__":

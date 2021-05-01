@@ -15,6 +15,10 @@ const Home = () => {
     function gotoDiagram() {
         history.push('/Diagram')
     }
+    function gotoXYZForce() {
+        history.push('/XYZForce')
+    }
+
     function gotoABCDocument() {
         history.push('/ABCDocuments')
     }
@@ -44,6 +48,23 @@ const Home = () => {
                 <table border='1'>
                     <tbody>
                         <tr>
+
+                            <td valign='top'>
+
+                                <button onClick={gotoXYZForce}>
+                                    <div style={style_big}>
+                                        🐕
+        </div>
+                                    <hr></hr>
+                                    <div style={style_mid}>
+                                        XYZForce
+    </div>
+                                </button>
+                            </td>
+
+
+
+
                             <td valign='top'>
 
                                 <button onClick={gotoFauxForce}>

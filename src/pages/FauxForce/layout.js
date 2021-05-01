@@ -1,10 +1,17 @@
-import React from "react";
-// import * as d3 from "d3";
-// import { Dot } from './logic.js'
+import React, { useEffect } from 'react';
+import { data } from './data.js'
 import { dimensions, Dot, findNewPoint } from './guilogic.js'
 
 const FauxForce = () => {
 
+    useEffect(() => {
+        var c = document.getElementById("background");
+        var ctx = c.getContext("2d");
+        ctx.lineWidth = 1;
+        ctx.strokeRect(0, 0, 100, 100);
+
+
+    }, data)
 
 
     return (

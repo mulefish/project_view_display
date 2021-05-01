@@ -5,6 +5,7 @@ import SecondPass from './pages/SecondPass/index.js'
 import Diagram from './pages/Diagram/Diagram.js'
 import ABCDocuments from './pages/ABCDocuments/index.js'
 import FauxForce from './pages/FauxForce/index.js'
+import XYZForce from './pages/XYZForce/index.js'
 
 const App = () => {
 
@@ -15,6 +16,10 @@ const App = () => {
           <Route exact path="/">
             <Home />
           </Route>
+          <Route exact path="/XYZForce">
+            <XYZForce />
+          </Route>
+
           <Route exact path="/ForceDirectedGraph">
             <ForceDirectedGraph />
           </Route>
