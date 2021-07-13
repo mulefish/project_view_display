@@ -13,13 +13,7 @@ function KITTY_SUCCESS(kittycats) {
     }
 }
 
-// const abc_Failbot = () => ({
-//     type: TYPES.ABC_ERROR,
-//     error: 'It failed.',
-// });
-
 export default {
     ABC_SUCCESS,
     KITTY_SUCCESS
-    // abc_Failbot,
 };
